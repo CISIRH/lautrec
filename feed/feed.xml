@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="fr">
+	<title>Accessibilité numérique au CISIRH</title>
+	<subtitle>Centre interministériel de services informatiques relatifs aux ressources humaines (CISIRH)</subtitle>
+	<link href="https://cisirh.github.io/accessibilite/feed/feed.xml" rel="self"/>
+	<link href="https://cisirh.github.io/accessibilite/accessibilite"/>
+	<updated>2025-06-24T22:09:27Z</updated>
+	<id>https://cisirh.github.io/accessibilite</id>
+	<author>
+		<name>Centre interministériel de services informatiques relatifs aux ressources humaines</name>
+		<email>contact.cisirh@finances.gouv.fr</email>
+	</author>
+</feed>

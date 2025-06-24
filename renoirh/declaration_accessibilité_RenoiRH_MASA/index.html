@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="fr" data-fr-scheme="system" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="Centre interministériel de services informatiques relatifs aux ressources humaines (CISIRH)">
+  <meta name="theme-color" content="#000091">
+  <link rel="apple-touch-icon" href="/accessibilite/favicon/apple-touch-icon.png"><!-- 180×180 -->
+  <link rel="icon" href="/accessibilite/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/accessibilite/favicon/favicon.ico" type="image/x-icon"><!-- 32×32 -->
+  <link rel="manifest" href="/accessibilite/favicon/manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="alternate" href="/accessibilite/feed/feed.xml" type="application/atom+xml" title="Accessibilité numérique au CISIRH">
+  <link rel="alternate" href="/accessibilite/feed/feed.json" type="application/json" title="Accessibilité numérique au CISIRH">
+
+  <link rel="stylesheet" href="/accessibilite/css/dsfr.min.css">
+  <link rel="stylesheet" href="/accessibilite/css/utility/utility.min.css">
+  <style>/* Defaults */
+:root {
+    --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+    --syntax-tab-size: 2;
+}
+
+/* Global stylesheet */
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+table {
+    margin: 1em 0;
+}
+
+table td,
+table th {
+    padding-right: 1em;
+}
+
+pre,
+code {
+    font-family: var(--font-family-monospace);
+}
+
+pre[class*="language-"] {
+    margin-bottom: 1.5em !important;
+}
+
+pre:not([class*="language-"]) {
+    margin: .5em 0;
+    line-height: 1.375; /* 22px /16 */
+    -moz-tab-size: var(--syntax-tab-size);
+    -o-tab-size: var(--syntax-tab-size);
+    tab-size: var(--syntax-tab-size);
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+}
+
+code {
+    word-break: break-all;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+    background-image: none;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 1em;
+    margin-left: .1em;
+}
+
+a[href].header-anchor,
+a[href].header-anchor:visited {
+    color: transparent;
+}
+
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+    text-decoration: underline;
+}
+
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+    color: #aaa;
+}
+
+h2 + .header-anchor {
+    font-size: 1.5em;
+}
+
+/* Custom DSFR */
+.fr-pagination__list {
+    justify-content: flex-end !important;
+}
+
+@media (min-width: 48em) {
+    .fr-share__group {
+        justify-content: flex-end !important;
+    }
+}
+
+.fr-responsive-img.fr-ratio-auto {
+    object-fit: contain;
+}
+
+.fr-quote__image img {
+    object-fit: cover;
+}
+
+/** Properly render text in Markdown callout containers **/
+div.fr-callout__text p {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/** Missing icons **/
+.fr-follow .fr-btn--peertube:before,
+.fr-follow .fr-btn--github:before,
+.fr-follow .fr-btn--sourcehut:before {
+    margin-left: 0;
+    margin-right: 0.5rem;
+    flex: 0 0 auto;
+    display: inline-block;
+    vertical-align: calc((0.75em - var(--icon-size)) * 0.5);
+    background-color: currentColor;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    --icon-size: 2rem;
+    content: "";
+}
+
+.fr-follow .fr-btn--peertube:before {
+    -webkit-mask-image: url(/icons/logo/peertube.svg) !important;
+    mask-image: url(/icons/logo/peertube.svg) !important;
+}
+
+.fr-follow .fr-btn--github:before {
+    -webkit-mask-image: url(/icons/logo/github-fill.svg) !important;
+    mask-image: url(/icons/logo/github-fill.svg) !important;
+}
+
+.fr-follow .fr-btn--sourcehut:before {
+    -webkit-mask-image: url(/icons/logo/sourcehut.svg) !important;
+    mask-image: url(/icons/logo/sourcehut.svg) !important;
+}
+
+/* Custom */
+.text-center {
+    text-align: center;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}</style>
+
+  <meta name="generator" content="Eleventy v2.0.1">
+
+  <title>RenoiRH MASA</title>
+</head>
+<body id="top">
+<div class="fr-skiplinks"><nav class="fr-container" role="navigation" aria-label="Accès rapide"><ul class="fr-skiplinks__list"><li><a class="fr-link" href="#content">Contenu</a></li><li><a class="fr-link" href="#navigation-494">Menu</a></li><li><a class="fr-link" href="#header-search">Recherche</a></li><li><a class="fr-link" href="#footer">Pied de page</a></li></ul></nav></div>
+<script>
+      // Fix FOUC in dark mode
+      setDarkBeforeRender = () => {
+          const localScheme = localStorage.getItem('scheme')
+          if (localScheme === 'dark' || (localScheme === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+              document.documentElement.setAttribute('data-fr-theme', 'dark');
+          }
+      }
+      setDarkBeforeRender();
+  </script><header role="banner" class="fr-header">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo"><p class="fr-logo">République<br>française</p></div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-491" aria-haspopup="menu" id="button-492" title="Menu">
+                Menu
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/accessibilite/" title="Accueil - Accessibilité numérique au CISIRH - Ministère de l&#39;Action publique, de la fonction publique et de la simplification">
+              <p class="fr-header__service-title"> Accessibilité numérique au CISIRH </p>
+            </a>
+            <p class="fr-header__service-tagline">Centre interministériel de services informatiques relatifs aux ressources humaines (CISIRH)</p>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-links-group">
+              <li>
+                <a class="fr-link fr-icon-rss-line" href="/accessibilite/feed/feed.json">Flux RSS</a>
+              </li>
+            </ul>
+            <!--<nav role="navigation" class="fr-translate fr-nav">
+  <div class="fr-nav__item">
+    <button class="fr-translate__btn fr-btn fr-btn--tertiary" aria-controls="translate-516" aria-expanded="false"
+            title="Sélectionner une langue">
+      FR
+    </button>
+    <div class="fr-collapse fr-translate__menu fr-menu" id="translate-516">
+      <ul class="fr-menu__list">
+        <li>
+          <a class="fr-translate__language fr-nav__link" href="/renoirh/declaration_accessibilité_RenoiRH_MASA/" lang="fr"
+             hreflang="fr" aria-current="true">
+            FR - Français
+          </a>
+        </li>
+            <li>
+              <a class="fr-translate__language fr-nav__link" aria-disabled="true" lang="en" hreflang="en">
+                EN - English
+              </a>
+            </li>
+      </ul>
+    </div>
+  </div>
+</nav>-->
+          </div>
+          <div class="fr-header__search fr-modal" id="modal-474">
+            <div class="fr-container fr-container-lg--fluid">
+              <button class="fr-btn--close fr-btn" aria-controls="modal-474" title="Fermer">
+                Fermer
+              </button>
+              <div class="fr-search-bar" id="header-search" role="search">
+                <label class="fr-label" for="search-784-input">
+                  Recherche
+                </label>
+                <input class="fr-input" placeholder="Rechercher" type="search" id="search-784-input" name="search-784-input">
+                <button class="fr-btn" title="Rechercher">
+                  Rechercher
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fr-header__menu fr-modal" id="modal-491" aria-labelledby="button-492">
+    <div class="fr-container">
+      <button class="fr-btn--close fr-btn" aria-controls="modal-491" title="Fermer">
+        Fermer
+      </button>
+      <div class="fr-header__menu-links"></div>
+<nav class="fr-nav" id="navigation-494" role="navigation" aria-label="Menu principal">
+  <ul class="fr-nav__list">
+      <li class="fr-nav__item">
+          <a class="fr-nav__link" href="/accessibilite/">
+            Accueil
+          </a>
+      </li>
+      <li class="fr-nav__item">
+          <a class="fr-nav__link" href="/accessibilite/presentation/">
+            Présentation de la démarche d&#39;accessibilité du CISIRH
+          </a>
+      </li>
+      <li class="fr-nav__item">
+          <a class="fr-nav__link" href="/accessibilite/schema-pluriannuel/">
+            Schéma Pluriannuel
+          </a>
+      </li>
+      <li class="fr-nav__item">
+          <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-4">
+            RenoiRH
+          </button>
+          <div class="fr-collapse fr-menu" id="menu-4">
+            <ul class="fr-menu__list">
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_ARCEP/">
+                    RenoiRH ARCEP
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_Branly/">
+                    RenoiRH Quai Branly
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_CE/">
+                    RenoiRH Conseil d&#39;Etat
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_Cour des comptes/">
+                    RenoiRH Cour des comptes
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_ENV/">
+                    RenoiRH MATTE
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_Eiffel/">
+                    RenoiRH ENSA Malaquais
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_MASA/" aria-current="page">
+                    RenoiRH MASA
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_MCC/">
+                    RenoiRH Culture
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_MEN/">
+                    RenoiRH MEN
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_MINARM/">
+                    RenoiRH MINARM
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_MSO/">
+                    RenoiRH MSO
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_Meteo/">
+                    RenoiRH Météo France
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/renoirh/declaration_accessibilité_RenoiRH_SPM/">
+                    RenoiRH SPM
+                  </a>
+                </li>
+            </ul>
+          </div>
+      </li>
+      <li class="fr-nav__item">
+          <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-5">
+            Hors RenoiRH
+          </button>
+          <div class="fr-collapse fr-menu" id="menu-5">
+            <ul class="fr-menu__list">
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_Boite_outils/">
+                    BAO
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_CTDSN/">
+                    CTDSN
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_EDSN/">
+                    EDSN
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_Espace_Noyau/">
+                    Espace Noyau
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_Esteve/">
+                    ESTEVE
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_GRECO/">
+                    GRECO
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_Messager/">
+                    INTRANET MESSAGER
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_RIGA/">
+                    RIGA
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_Rebecca/">
+                    Rebecca
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_SICARDI/">
+                    SICARDI
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_SICARDI_DSFR/">
+                    SICARDI DSFR
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_SICD/">
+                    ProfilCadreSup
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_SIGNAC/">
+                    SIGNAC
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_Self_Mobile/">
+                    Self Mobile
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_Simulateur_carriere/">
+                    Simulateur de carrière
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_portail_BARRI/">
+                    Portail BARRI
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_portail_RIE/">
+                    Portail RIE
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/hors-renoirh/declaration_accessibilité_portail_WEB/">
+                    Portail INTERNET
+                  </a>
+                </li>
+            </ul>
+          </div>
+      </li>
+      <li class="fr-nav__item">
+          <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-6">
+            À propos
+          </button>
+          <div class="fr-collapse fr-menu" id="menu-6">
+            <ul class="fr-menu__list">
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/about/">
+                    Présentation
+                  </a>
+                </li>
+                <li>
+                  <a class="fr-nav__link" href="/accessibilite/contact/">
+                    Contact
+                  </a>
+                </li>
+            </ul>
+          </div>
+      </li>
+  </ul>
+</nav>
+    </div>
+  </div>
+</header>
+
+<main role="main" id="content">
+  <div class="fr-mb-6w">
+  <div class="fr-py-6w fr-background-alt--blue-cumulus">
+    <div class="fr-container">
+      <div class="fr-grid-row">
+        <div class="fr-col-10">
+          <h1 class="fr-mt-6v">RenoiRH MASA</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fr-container fr-mt-6w" data-pagefind-body="">
+    <div class="fr-grid-row">
+      <div class="fr-col-12">
+        <div class="row">
+  <div class="col-sm-offset-1 col-sm-10 gray-darker well well-sm ">
+    <h1>Déclaration d’accessibilité de RenoiRH</h1>
+    <div id="accessconfig" data-accessconfig-buttonname="Paramètres d’accessibilité" data-accessconfig-params='{ "Prefix" : "a42-ac", "Font" : false, "LineSpacing": false, "Justification": false, "ImageReplacement": false}'></div>
+
+    <p>Le Centre Interministériel de Services Informatiques relatifs aux Ressources Humaines (CISIRH) est client de la société Sopra HR au titre du progiciel HR Access sur lequel est construite l’application RenoiRH.</p>
+    <h2>État de conformité</h2>
+    <p>L'application RenoiRH est <strong>non conforme avec le RGAA 4.1</strong>. Non conforme veut dire que la plupart des sections du contenu ne sont pas conformes aux standards d'accessibilité.</p>
+<h3>Résultats des tests</h3>
+    <p>Les audits de l’application, réalisés par la société <span lang="en">Ethic First</span>, révèlent que la version actuelle de RenoiRH respecte 33,96 % des critères du RGAA.</p>
+
+<h2>Contenus non accessibles</h2>
+
+<h3>Non-conformités</h3>
+<p>Les points de non-conformités suivants ont été relevés :</p>
+<ul>
+    <li>Des images porteuses d'information n'ont pas d'alternative textuelle.</li>
+    <li>Des images de décoration comme des pictogrammes de bouton ne sont pas correctement ignorées par les technologies d'assistance.</li>
+    <li>Des graphiques n'ont pas de description détaillée.</li>
+    <li>Les cadres n'ont pas de titre.</li>
+    <li>Certaines informations comme le statut "sélectionné" des onglets ne sont données que par la couleur.</li>
+    <li>Certains textes sont trop peu contrastés avec leur arrière-plan.</li>
+    <li>Certains composants d'interface comme des champs de formulaire, des boutons, des cases à cocher ne sont pas assez contrastés avec leur arrière-plan.</li>
+    <li>Des tableaux de données complexes n'ont pas de résumé.</li>
+    <li>Des tableaux sont utilisés à des fins de mise en forme.</li>
+    <li>Les titres ne sont pas associés aux tableaux.</li>
+    <li>Des tableaux de données ont des en-têtes non déclarés et/ou non associés avec leurs cellules.</li>
+    <li>Des liens de la barre d'outils ne sont pas explicites car ils ne sont pas traduits en français.</li>
+    <li>Des liens n'ont pas d'intitulé.</li>
+    <li>Des composants d'interface (fenêtres modales, menus de navigation, divulgations (disclosures), combobox, onglets, boutons, listes de sélection, fils d'Ariane, switchs, arborescences de fichiers, champs de saisie avec bouton de suppression, tableaux interactifs) ne sont pas compatibles avec les technologies d'assistance et/ou contrôlables au clavier.</li>
+    <li>Les messages de statut ne sont pas restitués par les technologies d'assistance.</li>
+    <li>Des pages n'ont pas de langue par défaut.</li>
+    <li>La langue par défaut de certaines pages n'est pas appropriée, car la langue définie ne correspond pas à celle du contenu affiché.</li>
+    <li>Certaines pages n'ont pas de titres pertinents.</li>
+    <li>Des balises sans sémantique sont utilisées pour structurer du contenu textuel.</li>
+    <li>Le contenu n'est pas toujours structuré par des titres ou des listes.</li>
+    <li>Des balises de structuration du document ne sont pas implémentées.</li>
+    <li>Les contenus ne s'adaptent pas lorsque la fenêtre est d'une largeur de 320px.</li>
+    <li>Du contenu n'est plus compréhensible et le contenu visible porteur d’information n'est plus présent lorsque les feuilles de style sont désactivées.</li>
+    <li>Certains contenus ne sont plus lisibles lorsque l'utilisateur applique un zoom de 200 %.</li>
+    <li>La prise de focus n'est pas toujours visible sur les éléments interactifs.</li>
+    <li>Des champs de formulaire n'ont pas d'étiquette.</li>
+    <li>Les contrôles de saisie dans les formulaires ne sont pas accessibles car les messages d'erreur ne sont pas restitués par les technologies d'assistance lors de la prise de focus sur les champs. L'indication du caractère obligatoire de certains champs n'est pas précisée en amont du formulaire.</li>
+    <li>Des cases à cocher ne sont pas regroupées.</li>
+    <li>Le moteur de recherche n'est pas défini comme étant une zone de groupement de contenu.</li>
+    <li>Il n'y a pas de lien d’évitement.</li>
+    <li>L'ordre de tabulation n'est pas toujours cohérent.</li>
+  </ul>
+  <h3>Dérogations pour charge disproportionnée</h3>
+    <p>Sollicitée par le CISIRH, la société Sopra HR a déclaré:
+      </p><ul>
+        <li>que les niveaux d’investissement exigés par une mise en conformité de la version actuelle de RenoiRH aux normes du RGAA créeraient des impacts et coûts hors de proportion sur l’ensemble des clients de Sopra HR ;</li>
+        <li>s’être engagée dans une stratégie de mise en conformité progressive avec le RGAA sur les fonctionnalités destinées au plus grand nombre d’utilisateurs (plus de 99 % de l’effectif total).</li>
+      </ul>
+    <p></p>
+    <p>Pour justifier ce constat, Sopra HR s’appuie sur une analyse différentiée par rapport à l’usage de ses solutions, en distinguant les acteurs suivants :
+      </p><ul>
+        <li>les Agents ou collaborateurs, représentant 100 % de l’effectif total de l’administration, et utilisant les fonctionnalités de Self-Service de l’offre HR Access.</li>
+        <li>les Responsables hiérarchiques ou opérationnels, pouvant représenter 5 % de l’effectif total, et utilisant les fonctionnalités de Self-Service de l’offre HR Access.</li>
+        <li>les Responsables RH de proximité, répartis habituellement au sein des unités organisationnelles, pouvant représenter 2 à 3 % de l’effectif total. Ces responsables RH utilisent, à ce jour, un sous-ensemble restreint des fonctions « transactionnelles »
+          de l’offre HR Accessibilité.</li>
+        <li>les Gestionnaires Experts de la fonction RH représentant habituellement moins de 0,5 % de l’effectif total. Ces gestionnaires experts utilisent toutes les fonctions « transactionnelles » de l’offre HR Access.</li>
+      </ul>
+    <p></p>
+    <h4>1) Concernant les fonctionnalités de Self-Service (pour les agents et responsables hiérarchiques) :</h4>
+    <p>Le logiciel HR Access propose une technologie appelée « Processus Guidés » au sein de Hra Space. Le mode de génération du HTML, à partir de la description fonctionnelle faite dans Design Center, et utilisant d’anciennes bibliothèques javascript de
+      rendu graphique, ne permet pas d’atteindre un niveau de conformité supérieure à 50 % des critères du RGAA.</p>
+    <p>Sopra HR investit sur une nouvelle génération de solution digitale (« Espace RH 4YOU ») à destination des agents et responsables hiérarchiques, en substitution progressive de l’ancienne technologie des Processus Guidés. Cette nouvelle solution est développée sur la base de frameworks javascript récents et sera progressivement mise en conformité avec le référentiel RGAA.  La version actuelle de cette solution n’est cependant pas accessible (moins de 50 % des critères du RGAA sont respectés). Des travaux de mis en conformité partielle avec le RGAA sont en cours.</p>
+    <h4>2) Concernant les fonctionnalités destinées aux Responsables RH de proximité :</h4>
+    <p>Ces utilisateurs disposent à ce jour d’un sous-ensemble d’écrans transactionnels basés sur la technologie Hra Tools (Client Riche).</p>
+    <p>Sopra HR projette de compléter progressivement son offre progicielle par un nouvel « Espace Gestionnaire 4YOU » incluant, entre autres fonctionnalités, un ensemble de processus métiers dédiés à ces Responsables RH de proximité, c’est-à-dire non spécialistes
+      de la fonction RH, et potentiellement présents en nombre au sein de l’administration. Sopra HR s’engage également à mettre en conformité avec les critères du RGAA cette nouvelle IHM pour les Responsables de proximité, basée sur la nouvelle plateforme
+      technologique 4You.</p>
+    <p>Ces nouvelles fonctionnalités seront intégrées au sein du module « Espace Gestionnaire » inscrit au catalogue Editeur.</p>
+    <p>Les travaux de conception fonctionnelle des futures IHM dédiées aux Responsables RH de proximité se poursuivent en incluant l’analyse des processus métiers concernés (en fonction des secteurs d’activité ciblés). La version actuelle de cette solution n’est cependant pas accessible (moins de 50 % des critères du RGAA sont respectés). Des travaux de mis en conformité partielle avec le RGAA sont en cours.</p>
+    <h4>3) Concernant les fonctionnalités destinées aux Gestionnaires Experts de la fonction RH :</h4>
+    <p>Ces utilisateurs disposent à ce jour d’un accès à la totalité des écrans transactionnels basés sur la technologie Hra Tools (Client Riche).</p>
+    <p>Le standard Hra Suite 9 FPE propose plus de 2600 pages web et un ensemble complémentaire très important de fonctionnalités avancées pour ces utilisateurs. Les 2600 pages web sont maquettées au sein de l’atelier logiciel HR Design et les IHM correspondantes
+      sont générées par Hra Tools. L’atelier HR Design permet à l’ensemble des clients de Sopra HR de personnaliser simplement les IHM standard pour prendre en compte des besoins complémentaires spécifiques.</p>
+    <p>Les autres fonctionnalités avancées sont livrées sous forme d’exécutables, non modifiables par les clients (Intuitive Query, HRCT, console de supervision…).</p>
+    <p>Sopra HR poursuit ses investissements dans la technologie Hra Tools pour apporter des améliorations sur l’utilisabilité du progiciel, mais sans rechercher de façon systématique la conformité avec le RGAA. En effet, les améliorations de Hra Tools devant
+      respecter une stricte compatibilité ascendante par rapport aux personnalisations réalisées par l’ensemble du parc client, la mise en conformité de cette technologie avec le RGAA provoquerait :
+      </p><ul>
+        <li>une rupture de compatibilité (entraînée mécaniquement par l’adhésion systématique aux critères RGAA) qui engendrerait des surcoûts importants pour l’ensemble des clients de Sopra HR ;</li>
+        <li>une réduction du périmètre fonctionnel et des outils mis à disposition des Experts RH.</li>
+      </ul>Cette politique de stricte compatibilité ascendante de la technologie Hra Tools vis-à-vis de son utilisation par les clients est critique également pour le CISIRH, compte-tenu de l’importance des ajouts et modifications des IHM standard au sein
+      de RenoiRH.<p></p>
+    <p>Enfin, à ces blocages techniques, s’ajoute une problématique financière. Les investissements qui seraient nécessaires à l’application complète des exigences du RGAA pour la technologie Hra Tools apparaissent en effet disproportionnés.</p>
+    <p>
+      </p><ol>
+        <li>L’investissement directement lié à la refonte complète de la technologie Hra Tools. Cette technologie est la propriété exclusive de Sopra HR et seul Sopra HR peut entreprendre ces travaux. Compte-tenu de la richesse fonctionnelle de Hra Tools
+          et de l’enjeu de minimisation des impacts sur les clients de Sopra HR, Sopra HR estime l’investissement nécessaire entre 6 et 10 millions d’euros (sous réserve d’une vérification technique approfondie).</li>
+        <li>L’investissement lié à la mise à jour de l’application standard dédiée à la Fonction Publique d’État (incluant les 2600 pages) sur la base de la nouvelle technologie Hra Tools (point 1). Cette application est la propriété exclusive de Sopra HR
+          et seul Sopra HR peut entreprendre ces travaux. Sopra HR estime l’investissement nécessaire entre 4 et 6 millions d’euros.</li>
+        <li>L’investissement lié à la mise à jour de RenoiRH, à la suite de la disponibilité de la nouvelle technologie Hra Tools (point 1) et de la nouvelle application standard dédiée à la Fonction Publique d’État (point 2). Celui-ci devra être estimé au
+          regard des discontinuités résiduelles imposées par la nouvelle technologie Hra Tools et de l’étendue des spécifiques de RenoiRH. Sopra HR estime l’investissement nécessaire entre 2 et 4 millions d’euros.</li>
+      </ol>
+    <p></p>
+    <p>Les impacts et coûts mentionnés ci-dessus contraignent le CISIRH à invoquer la dérogation pour charge disproportionnée aux exigences légales en matière d’accessibilité, prévue par le RGAA et applicables à la version actuelle de RenoiRH. La mise en
+      accessibilité de l’application compromettrait en effet la capacité du CISIRH à remplir sa mission de service public.</p>
+
+    <h2>Établissement de cette déclaration d’accessibilité</h2>
+    <p>Cette déclaration a été établie le 2 octobre 2023. Elle a été mise à jour le 28 janvier 2025.</p>
+    <h3>Technologies utilisées pour la réalisation du site</h3>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>PDF</li>
+    </ul>
+    <h3>Outils pour évaluer l'accessibilité</h3>
+    <ul>
+      <li>Module ANDI (<span lang="en">Accessible Name and Description Inspector</span></li>
+      <li><span lang="en">Colour Contrast Analyzer</span></li>
+      <li>Extension <span lang="en">Web Developer</span></li>
+      <li>Outils pour développeurs intégrés au navigateur <span lang="en">Firefox</span></li>
+    </ul>
+    <h2>Retour d'information et contact</h2>
+    <p>Dans l’attente de la mise en production des correctifs évoqués par Sopra HR, le CISIRH invite les utilisateurs de RenoiRH ne pouvant accéder à un contenu ou à une fonctionnalité de RenoiRH en raison de leur handicap à <a href="mailto:liste-mission-sirh-sg@agriculture.gouv.fr">contacter le service de ressources humaines du ministère de l'Agriculture et de la Souveraineté alimentaire</a>      afin d’obtenir l’accès à un contenu ou à une fonctionnalité équivalente.</p>
+  </div>
+</div>
+
+</div></div></div></div></main></body></html>
+
+      
+    
+  
+
+
+
+
+<div class="fr-follow">
+  <div class="fr-container">
+    <div class="fr-grid-row fr-grid-row--top">
+      <div class="fr-col-12 fr-col-md-8">
+      <!--
+        <div class="fr-follow__newsletter">
+          <div>
+            <p class="fr-h5">Abonnez-vous à notre lettre d’information</p>
+            <p class="fr-text--sm"></p>
+          </div>
+          <div class="fr-btns-group fr-btns-group--inline-md">
+            <a class="fr-btn" title="S&#39;abonner" href="" target="_blank"
+               rel="noopener">
+              S&#39;abonner
+            </a>
+          </div>
+        </div>
+        -->
+      </div>
+      <div class="fr-col-12 fr-col-md-4">
+        <div class="fr-follow__social">
+          <p class="fr-h5">Suivez-nous <br> sur nos réseaux </p>
+          <ul class="fr-btns-group">
+              <li><a class="fr-btn--twitter-x fr-btn" title="Twitter - Nouvelle fenêtre" href="https://x.com/cisirh" target="_blank" rel="noopener external">
+                  X (anciennement Twitter) </a></li>
+              <li><a class="fr-btn--linkedin fr-btn" title="Linkedin - Nouvelle fenêtre" href="https://www.linkedin.com/company/cisirh" target="_blank" rel="noopener external">
+                  linkedin </a></li>
+              <li><a class="fr-btn--youtube fr-btn" title="Youtube - Nouvelle fenêtre" href="https://www.youtube.com/channel/UCOG65O7ph52p1iCXr05pQAw" target="_blank" rel="noopener external">
+                  youtube </a></li>
+          </ul>
+          <ul class="fr-btns-group">
+              <li><a class="fr-btn--github fr-btn" title="GitHub - Nouvelle fenêtre" href="https://github.com/CISIRH" target="_blank" rel="noopener external">
+                  github </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="fr-footer" role="contentinfo" id="footer">
+  <div class="fr-container">
+    <div class="fr-footer__body">
+      <div class="fr-footer__brand fr-enlarge-link">
+        <a href="/accessibilite/" title="Accueil - Ministère de l&#39;Action publique, de la fonction publique et de la simplification">
+          <p class="fr-logo">République<br>française</p>
+        </a>
+      </div>
+      <div class="fr-footer__content">
+        <p class="fr-footer__content-desc"> Le présent site est une publication du <a href="https://economie.gouv.fr/cisirh">Centre interministériel de services informatiques relatifs aux ressources humaines</a>. Le code source de ce site est publié sous licence Cecillv2.1.</p>
+        <ul class="fr-footer__content-list">
+          <li class="fr-footer__content-item">
+            <a class="fr-footer__content-link" target="_blank" rel="noopener external" href="https://legifrance.gouv.fr">legifrance.gouv.fr</a>
+          </li>
+          <li class="fr-footer__content-item">
+            <a class="fr-footer__content-link" target="_blank" rel="noopener external" href="https://gouvernement.fr">gouvernement.fr</a>
+          </li>
+          <li class="fr-footer__content-item">
+            <a class="fr-footer__content-link" target="_blank" rel="noopener external" href="https://service-public.fr">service-public.fr</a>
+          </li>
+          <li class="fr-footer__content-item">
+            <a class="fr-footer__content-link" target="_blank" rel="noopener external" href="https://data.gouv.fr">data.gouv.fr</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-footer__bottom">
+      <ul class="fr-footer__bottom-list">
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" href="/accessibilite/sitemap/">Plan du site</a>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" href="/accessibilite/">
+            Accessibilité : Partiellement conforme
+          </a>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" href="/accessibilite/mentions-legales/">Mentions légales</a>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" href="/accessibilite/donnees-personnelles/">Données personnelles</a>
+        </li>
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link fr-icon-pencil-line fr-link--icon-left" href="https://github.com/CISIRH/accessibilite/blob/main/./content/renoirh/declaration_accessibilité_RenoiRH_MASA.html">Modifier cette page</a>
+        </li>
+        
+        <li class="fr-footer__bottom-item">
+          <button class="fr-footer__bottom-link fr-fi-theme-fill fr-link--icon-left" aria-controls="fr-theme-modal" data-fr-opened="false">
+            Paramètres d&#39;affichage
+          </button>
+        </li>
+      </ul>
+      <div class="fr-footer__bottom-copy">
+        <p>
+          Sauf mention contraire, tous les contenus de ce site sont sous <a href="." target="_blank" rel="noopener">Cecill 2.1</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<dialog id="fr-theme-modal" class="fr-modal" role="dialog" aria-labelledby="fr-theme-modal-title">
+  <div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+        <div class="fr-modal__body">
+          <div class="fr-modal__header">
+            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal" title="Fermer">
+              Fermer
+            </button>
+          </div>
+          <div class="fr-modal__content">
+            <h1 id="fr-theme-modal-title" class="fr-modal__title"> Paramètres d&#39;affichage </h1>
+            <div id="fr-display" class="fr-display">
+              <div class="fr-form-group">
+                <fieldset class="fr-fieldset">
+                  <legend class="fr-fieldset__legend fr-text--regular" id="-legend">
+                    Choisissez un thème pour personnaliser l’apparence du site.
+                  </legend>
+                  <div class="fr-fieldset__content">
+                    <div class="fr-radio-group fr-radio-rich">
+                      <input value="light" type="radio" id="fr-radios-theme-light" name="fr-radios-theme">
+                      <label class="fr-label" for="fr-radios-theme-light"> Thème clair </label>
+                      <div class="fr-radio-rich__img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="fr-artwork" width="80px" height="80px" viewBox="0 0 80 80">
+                          <use class="fr-artwork-decorative" xlink:href="/accessibilite/artwork/light.svg#artwork-decorative"></use>
+                          <use class="fr-artwork-minor" xlink:href="/accessibilite/artwork/light.svg#artwork-minor"></use>
+                          <use class="fr-artwork-major" xlink:href="/accessibilite/artwork/light.svg#artwork-major"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="fr-radio-group fr-radio-rich">
+                      <input value="dark" type="radio" id="fr-radios-theme-dark" name="fr-radios-theme">
+                      <label class="fr-label" for="fr-radios-theme-dark"> Thème sombre </label>
+                      <div class="fr-radio-rich__img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="fr-artwork" width="80px" height="80px" viewBox="0 0 80 80">
+                          <use class="fr-artwork-decorative" xlink:href="/accessibilite/artwork/dark.svg#artwork-decorative"></use>
+                          <use class="fr-artwork-minor" xlink:href="/accessibilite/artwork/dark.svg#artwork-minor"></use>
+                          <use class="fr-artwork-major" xlink:href="/accessibilite/artwork/dark.svg#artwork-major"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="fr-radio-group fr-radio-rich">
+                      <input value="system" type="radio" id="fr-radios-theme-system" name="fr-radios-theme">
+                      <label class="fr-label" for="fr-radios-theme-system">
+                        Système
+                        <span class="fr-hint-text">Utilise les paramètres système.</span>
+                      </label>
+                      <div class="fr-radio-rich__img">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="fr-artwork" width="80px" height="80px" viewBox="0 0 80 80">
+                          <use class="fr-artwork-decorative" xlink:href="/accessibilite/artwork/system.svg#artwork-decorative"></use>
+                          <use class="fr-artwork-minor" xlink:href="/accessibilite/artwork/system.svg#artwork-minor"></use>
+                          <use class="fr-artwork-major" xlink:href="/accessibilite/artwork/system.svg#artwork-major"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Current page: /accessibilite/renoirh/declaration_accessibilité_RenoiRH_MASA/ -->
+
+<script>
+      const SEARCH_RESULTS_URL = "/accessibilite/search-results/";
+  </script>
+  <script type="text/javascript" src="/accessibilite/js/search.js"></script><!-- Script en version es6 module et nomodule pour les navigateurs le ne supportant pas -->
+<script type="module" src="/accessibilite/js/dsfr.module.min.js"></script>
+<script type="text/javascript" nomodule="" src="/accessibilite/js/dsfr.nomodule.min.js"></script>
+
+
