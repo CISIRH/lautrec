@@ -97,6 +97,10 @@
 		<lastmod>2025-07-07</lastmod>
 	</url>
 	<url>
+		<loc>https://cisirh.github.io/lautrec/plan-du-site/sitemap/</loc>
+		<lastmod>2025-07-07</lastmod>
+	</url>
+	<url>
 		<loc>https://cisirh.github.io/lautrec/presentation/</loc>
 		<lastmod>2025-07-07</lastmod>
 	</url>
@@ -161,15 +165,11 @@
 		<lastmod>2025-07-07</lastmod>
 	</url>
 	<url>
+		<loc>https://cisirh.github.io/lautrec/resultats_recherche/</loc>
+		<lastmod>2025-07-07</lastmod>
+	</url>
+	<url>
 		<loc>https://cisirh.github.io/lautrec/schema-pluriannuel/</loc>
-		<lastmod>2025-07-07</lastmod>
-	</url>
-	<url>
-		<loc>https://cisirh.github.io/lautrec/search-results/</loc>
-		<lastmod>2025-07-07</lastmod>
-	</url>
-	<url>
-		<loc>https://cisirh.github.io/lautrec/sitemap/</loc>
 		<lastmod>2025-07-07</lastmod>
 	</url>
 </urlset>
