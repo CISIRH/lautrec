@@ -1,6 +1,6 @@
 module.exports = {
-    title: "Accessibilité numérique au CISIRH",
-    url: "https://cisirh.github.io/accessibilite",
+    title: "LAUTREC - L'Accessibilité nUmérique des ouTils REcensés au CISIRH",
+    url: "https://cisirh.github.io/lautrec",
     newsletter: [
         {
             url: "",
@@ -17,7 +17,7 @@ module.exports = {
     peertube_url: "",
     github_url: "https://github.com/CISIRH",
     sourcehut_url: "",
-    repository_url: "https://github.com/CISIRH/accessibilite",
+    repository_url: "https://github.com/CISIRH/lautrec",
     language: "fr",
     description: "Centre interministériel de services informatiques relatifs aux ressources humaines (CISIRH)",
     author: {
