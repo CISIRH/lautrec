@@ -2,8 +2,8 @@
 	"version": "https://jsonfeed.org/version/1.1",
 	"title": "Accessibilité numérique au CISIRH",
 	"language": "fr",
-	"home_page_url": "https://cisirh.github.io/accessibilite/accessibilite",
-	"feed_url": "https://cisirh.github.io/accessibilite/feed/feed.json",
+	"home_page_url": "https://cisirh.github.io/lautrec/accessibilite",
+	"feed_url": "https://cisirh.github.io/lautrec/feed/feed.json",
 	"description": "Centre interministériel de services informatiques relatifs aux ressources humaines (CISIRH)",
 	"author": {
 		"name": "Centre interministériel de services informatiques relatifs aux ressources humaines",

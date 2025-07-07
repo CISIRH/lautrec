@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="fr">
 	<title>Accessibilité numérique au CISIRH</title>
 	<subtitle>Centre interministériel de services informatiques relatifs aux ressources humaines (CISIRH)</subtitle>
-	<link href="https://cisirh.github.io/accessibilite/feed/feed.xml" rel="self"/>
-	<link href="https://cisirh.github.io/accessibilite/accessibilite"/>
-	<updated>2025-06-27T12:25:11Z</updated>
+	<link href="https://cisirh.github.io/lautrec/feed/feed.xml" rel="self"/>
+	<link href="https://cisirh.github.io/lautrec/accessibilite"/>
+	<updated>2025-07-07T09:40:18Z</updated>
 	<id>https://cisirh.github.io/accessibilite</id>
 	<author>
 		<name>Centre interministériel de services informatiques relatifs aux ressources humaines</name>
