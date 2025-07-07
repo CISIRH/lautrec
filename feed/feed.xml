@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="fr">
-	<title>Accessibilité numérique au CISIRH</title>
+	<title>LAUTREC - L&#39;Accessibilité nUmérique des ouTils REcensés au CISIRH</title>
 	<subtitle>Centre interministériel de services informatiques relatifs aux ressources humaines (CISIRH)</subtitle>
 	<link href="https://cisirh.github.io/lautrec/feed/feed.xml" rel="self"/>
-	<link href="https://cisirh.github.io/lautrec/accessibilite"/>
-	<updated>2025-07-07T09:40:18Z</updated>
-	<id>https://cisirh.github.io/accessibilite</id>
+	<link href="https://cisirh.github.io/lautrec/lautrec"/>
+	<updated>2025-07-07T09:44:54Z</updated>
+	<id>https://cisirh.github.io/lautrec</id>
 	<author>
 		<name>Centre interministériel de services informatiques relatifs aux ressources humaines</name>
 		<email>contact.cisirh@finances.gouv.fr</email>

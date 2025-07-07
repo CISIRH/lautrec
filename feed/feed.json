@@ -1,8 +1,8 @@
 {
 	"version": "https://jsonfeed.org/version/1.1",
-	"title": "Accessibilité numérique au CISIRH",
+	"title": "LAUTREC - L&#39;Accessibilité nUmérique des ouTils REcensés au CISIRH",
 	"language": "fr",
-	"home_page_url": "https://cisirh.github.io/lautrec/accessibilite",
+	"home_page_url": "https://cisirh.github.io/lautrec/lautrec",
 	"feed_url": "https://cisirh.github.io/lautrec/feed/feed.json",
 	"description": "Centre interministériel de services informatiques relatifs aux ressources humaines (CISIRH)",
 	"author": {
