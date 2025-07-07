@@ -30,7 +30,7 @@ Malgré nos efforts, certains contenus sont inaccessibles. Vous trouverez ci-des
 - Code source non valide: le code source de l'application comporte des attributs obsolètes susceptibles d'affecter l'accessibilité de l'application.
 - Fichiers en téléchargement: certains documents en téléchargement ne sont pas traités pour l’accessibilité et ne disposent pas d’alternatives accessibles aux aveugles et grands malvoyants.
 
-L'ensemble de ces points de non conformité sera intégré aux plans d'action annuels du [schéma pluriannuel de mise en accessibilité du CISIRH](https://nexus.cisirh.rie.gouv.fr/repository/RGAA/CISIRH/Sch%C3%A9ma%20pluriannuel%20d'accessibilit%C3%A9%20du%20CISIRH).
+L'ensemble de ces points de non conformité sera intégré aux plans d'action annuels du [schéma pluriannuel de mise en accessibilité du CISIRH](https://cisirh.github.io/lautrec/schema-pluriannuel/).
 
 ## Outils utilisés pour évaluer l'accessibilité
 
