@@ -7,7 +7,7 @@ title: Plan du site
 <ul data-pagefind-ignore>
   {% for entry in collections.allSortedByPathAsc %}
     {% if entry.url %}
-      <li><a href="{{ entry.url }}"><code>{{ entry.title }}</code></a></li>
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
     {% endif %}
   {% endfor %}
 </ul>
