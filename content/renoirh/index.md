@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
-title: Déclarations d'accessibilité RenoiRH
+title: RenoiRH
 eleventyNavigation:
   key: RenoiRH
   parent:
