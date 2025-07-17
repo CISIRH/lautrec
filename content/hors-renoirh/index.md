@@ -1,8 +1,8 @@
 ---
 layout: layouts/page.njk
-title: Hors RenoiRH
+title: Déclarations d'accessibilité hors RenoiRH
 eleventyNavigation:
-  key: Hors RenoiRH
+  key: Déclarations d'accessibilité hors RenoiRH
   parent:
   order: 5
 ---
