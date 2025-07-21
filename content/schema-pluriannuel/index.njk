@@ -6,9 +6,7 @@ eleventyNavigation:
   parent:
   order: 2
 ---
-    <nav class="menu">
-      <div class="menuContainer">
-        <h2>Sommaire</h2>
+    <h2>Sommaire</h2>
         <ol>
           <li><a href="#contexte">Contexte</a>
             <ul>
@@ -45,6 +43,7 @@ eleventyNavigation:
               <li><a href="#integration">Intégration de l’accessibilité dans les procédures de travail </a>
               <ul>
                 <li><a href="#integration-marche">Intégration de l'accessibilité dans les procédures de marché</a></li>
+                <li><a href="#integration-developpement">Intégration de l'accessibilité dans les procédures de développement</a></li>
                 <li><a href="#integration-recette">Intégration de l'accessibilité dans les procédures de recette</a></li>
               </ul>
               </li>
@@ -70,7 +69,7 @@ eleventyNavigation:
               <li><a href="#ctdsn">CTDSN</a></li>
               <li><a href="#edsn">Espace DSN</a></li>
               <li><a href="#sicardi_standard">SICARDI (non DSFR)</a></li>
-              <li><a href="#messager">CISIRH Messager</a></li>
+              <li><a href="#sicardi_dsfr">SICARDI (DSFR)</a></li>
               <li><a href="#rebecca"><span lang="en">Chatbot</span> Rebecca</a></li>
               <li><a href="#greco">GRECO</a></li>
               <li><a href="#boite-outils">Boîte à outils du CISIRH</a></li>
@@ -79,13 +78,13 @@ eleventyNavigation:
               <li><a href="#riga">RIGA</a></li>
               <li><a href="#portail-barri">Portail du BARRI</a></li>
               <li><a href="#espace-noyau">Espace Noyau RH FPE</a></li>
-              <li><a href="#sicardi_dsfr">SICARDI (DSFR)</a></li>
+              <li><a href="#messager">CISIRH Messager</a></li>
             </ul>
           </li>
         </ol>
       </div>
     </nav>
-<main>
+    <main>
       <div class="content">
         <h2>
           <div id="contexte">1. Contexte</div>
@@ -96,7 +95,7 @@ eleventyNavigation:
         </h3>
         <p>Le Centre Interministériel de Services Informatiques Relatifs aux Ressources Humaines (CISIRH) est un service à compétence nationale créé par le décret du 9 février 2015.</p>
         <p>Les missions du CISIRH sont définies par le comité de pilotage métier, présidé par la DGAFP et qui est constitué des DRH de tous les ministères.</p>
-        <p>Le CISIRH contribue à la modernisation de la fonction « Ressources Humaines » de l’Etat, dans les domaines fonctionnels comme informatiques. Ses missions sont les suivantes :
+        <p>Le CISIRH contribue à la modernisation de la fonction « Ressources Humaines » de l’Etat, dans les domaines fonctionnels comme informatiques. Ses missions sont les suivantes :
         </p>
         <ul>
           <li>mettre à disposition des SIRH convergents et adaptés aux besoins de la fonction publique d’Etat;
@@ -129,24 +128,24 @@ eleventyNavigation:
         <h3>
           <div id="renvois">1.3. Renvois</div>
         </h3>
-        <p>La mise en accessibilité des applications du CISIRH s’appuie sur les textes législatifs et réglementaires suivants :
+        <p>La mise en accessibilité des applications du CISIRH s’appuie sur les textes législatifs et réglementaires suivants :
         </p>
         <ul>
-          <li>Référentiel général d’amélioration de l’accessibilité RGAA 4.1 ;
+          <li>Référentiel général d’amélioration de l’accessibilité RGAA 4.1 ;
           </li>
-          <li>Décret n°2019-768 du 24 juillet 2019 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne ;
+          <li>Décret n°2019-768 du 24 juillet 2019 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne ;
           </li>
-          <li>Loi n°2016-1321 du 7 octobre 2016 pour une République numérique (article 106) ;
+          <li>Loi n°2016-1321 du 7 octobre 2016 pour une République numérique (article 106) ;
           </li>
-          <li>Directive 2016/2102 du Parlement Européen et du Conseil du 26 octobre 2016 relative à l’accessibilité des sites internet et des applications mobiles des organismes du secteur public (<span lang="en">European Accessibility Act</span>) ;
+          <li>Directive 2016/2102 du Parlement Européen et du Conseil du 26 octobre 2016 relative à l’accessibilité des sites internet et des applications mobiles des organismes du secteur public (<span lang="en">European Accessibility Act</span>) ;
           </li>
-          <li>Règles européennes pour une information facile à lire et à comprendre de 2009 ;
+          <li>Règles européennes pour une information facile à lire et à comprendre de 2009 ;
           </li>
-          <li>Convention des Nations unies relative aux droits des personnes handicapées de 2006 (ratifiée par la France en 2010) ;
+          <li>Convention des Nations unies relative aux droits des personnes handicapées de 2006 (ratifiée par la France en 2010) ;
           </li>
-          <li>Loi n°2005-102 du 11 février 2005 pour l’égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées (article 47) ;
+          <li>Loi n°2005-102 du 11 février 2005 pour l’égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées (article 47) ;
           </li>
-          <li>Circulaire du Premier ministre du 7 octobre 1999 relative aux sites Internet des services et des établissements publics de l’Etat ;
+          <li>Circulaire du Premier ministre du 7 octobre 1999 relative aux sites Internet des services et des établissements publics de l’Etat ;
           </li>
           <li>Code pénal (article 225-2).
           </li>
@@ -192,7 +191,7 @@ eleventyNavigation:
         </h3>
         <p>Conformément à l’article 6 du décret n°2009-546 du 14 mai 2009 qui impose la formation à l’accessibilité de toute personne intervenant sur les services de communication publique en ligne, le CISIRH s'assure que les développeurs <span lang="en">front-end</span> travaillant sur ses applications soient formés à l'accessibilité.</p>
         <h4><div id="game">2.2.1. Game of code</div></h4>
-          <p>Le CISIRH met à la disposition de ses agents l'espace de formation en ligne <strong lang="en">Game of code</strong>. Cet espace permet aux agents:
+          <p>Le CISIRH met à la disposition de ses agents exerçant les fonctions de développeurs <span lang="en">front-end</span> l'espace de formation en ligne <strong lang="en">Game of code</strong>. Cet espace permet aux agents:
         </p>
         <ul>
           <li>de <strong>découvrir</strong> les critères du RGAA au moyen de tutoriels;
@@ -212,6 +211,8 @@ eleventyNavigation:
         </ul>
         <p>Les tutoriels sont publiés sur des plateformes de formation en ligne au fur et à mesure de leur réalisation.
         </p>
+        <p>Une attestation témoignant du suivi de la formation doit être transmise au CISIRH.</p>
+
         <h4><div id="exigences">2.2.2. Exigences de formation imposées aux prestataires du CISIRH</div></h4>
         <p>Les personnels des prestataires du CISIRH exerçant les fonctions de développeurs <span lang="en">front-end</span> doivent avoir suivi une formation dédiée à l'accessibilité numérique:</p>
         <ul>
@@ -236,10 +237,10 @@ eleventyNavigation:
         <h4>
           <div id="sensibilisation-encadrement">2.3.2. La sensibilisation de l’encadrement</div>
         </h4>
-        <p>Les chefs de projet ont un rôle clé dans la mise en accessibilité des applications dont ils ont la charge. En conséquence, il a été communiqué à chaque chef de projet du CISIRH une <strong>fiche synthétique</strong> lui rappelant :
+        <p>Les chefs de projet ont un rôle clé dans la mise en accessibilité des applications dont ils ont la charge. En conséquence, il a été communiqué à chaque chef de projet du CISIRH une <strong>fiche synthétique</strong> lui rappelant :
         </p>
         <ul>
-          <li>ses <strong>obligations légales</strong> ;
+          <li>ses <strong>obligations légales</strong> ;
           </li>
           <li>les <strong>actions attendues</strong> à chacune des étapes de la vie de son projet.
           </li>
@@ -274,7 +275,7 @@ eleventyNavigation:
         </div>
         <div><a href="mailto:aurelien.louche@finances.gouv.fr">aurelien.louche@finances.gouv.fr</a>
         </div>
-        <div>Tél. : 01 44 97 07 12
+        <div>Tél. : 01 44 97 07 12
         </div>
         <div>41, boulevard Vincent AURIOL
         </div>
@@ -300,7 +301,7 @@ eleventyNavigation:
         <ul>
           <li>d’une<strong> liste de diffusion</strong> comprenant les référents Handicap des structures avec lesquelles travaille le CISIRH (les usagers handicapés qui en font la demande peuvent être intégrés à cette liste de diffusion) ;
           </li>
-          <li>de <strong>comités dédiés</strong> (comités de pilotages spécifiques à une application et réunions bilatérales entre le référent RGAA du CISIRH et le référents Handicap d’une structure partenaire).
+          <li>de <strong>comités dédiés</strong> (comités de pilotages spécifiques à une application et réunions bilatérales entre le référent RGAA du CISIRH et le référent Handicap d’une structure partenaire).
           </li>
         </ul>
         <h3>
@@ -309,17 +310,23 @@ eleventyNavigation:
         <h4>
           <div id="integration-marche">2.7.1. Intégration de l'accessibilité dans les procédures de marché</div>
         </h4>
-        <p>Lors du lancement de ses projets de marchés, le CISIRH prend en compte les exigences d’accessibilité. Il intègre ces exigences dans les cahiers des clauses administratives particulières et en fait des obligations contractuelles que les titulaires
+        <p>Lors du lancement de ses projets de marchés, le CISIRH prend en compte les exigences d’accessibilité. Il intègre ces exigences dans les cahiers des clauses administratives particulières et en fait des obligations contractuelles que les titulaires
           doivent respecter.
         </p>
         <p>Par ailleurs, le CISIRH a engagé une démarche de réflexion visant à faire de l'accessiblité un critère de sélection des offres qui lui sont remises lors des mises en concurrence qu'il organise.</p>
-
+<h4>
+  <div id="integration-developpement">2.7.2. Intégration de l'accessibilité dans les procédures de développement</div>
+</h4>
+<p>
+Au cours de leurs travaux, les développeurs <span lang="en">front-end</span> du CISIRH consultent le référent accessibilité du CISIRH sur les règles à respecter pour que soient accessibles leurs éléments HTML/CSS, leurs maquettes ergonomiques et graphiques et leurs composants d'interface riche. 
+<p>Afin de mutualiser les bonnes pratiques, un salon virtuel regroupant l'intégralité des développeurs <span lang="en">front-end</span> du CISIRH est dédié à ces échanges.</p>
+</p>
         <h4>
-          <div id="integration-recette">2.7.2. Intégration de l'accessibilité dans les procédures de recette</div>
+          <div id="integration-recette">2.7.3. Intégration de l'accessibilité dans les procédures de recette</div>
         </h4>
         <p>Le CISIRH réalise au cours de ses recettes de pré-production des tests d'accessibilité spécifiques sur les fonctionnalités clés de l’application.
         </p>
-        <p>Afin d'éviter la dégradation de l'accessibilité des applications, des réunions trimestrielles sont également organisées entre le référent accessibilité numérique du CISIRH et les développeurs <span lang="en">front-end</span> d'applications ayant déjà fait l'objet d'un audit d'accessibilité. Ces réunions permettent:
+        <p>Afin d'éviter la dégradation de l'accessibilité des applications, des réunions régulières sont également organisées entre le référent accessibilité numérique du CISIRH et les développeurs <span lang="en">front-end</span> d'applications ayant déjà fait l'objet d'un audit d'accessibilité. Ces réunions permettent:
         <ul>
           <li>de déterminer si les nouvelles fonctionnalités développées au sein de ces applications sont susceptibles d'affecter l'accessibilité de ces dernières;</li>
           <li>le cas échéant, d'organiser un nouvel audit d'accessibilité portant sur ces nouvelles fonctionnalités.</li>
@@ -407,7 +414,7 @@ eleventyNavigation:
             <td>non-conformité</td>
           </tr>
         </table>
-
+       
          <p>Des travaux visant à améliorer l’accessibilité et l’utilisabilité des applications partiellement conformes et non-conformes sont en cours.</p>
         <p>Ces applications ont été sélectionnées en raison du <strong>périmètre important du public concerné</strong>, de la <strong>fréquence d’utilisation</strong> et de la <strong>confidentialité des données traitées</strong> (qui rend impérative l’autonomie
           de l’utilisateur).
@@ -474,7 +481,14 @@ eleventyNavigation:
             <td>CISIRH</td>
           </tr>
           <tr>
-            <td>Portail d’authentification unique (WEB et RIE)
+            <td>Portail d’authentification unique (WEB)
+            </td>
+            <td>En production
+            </td>
+            <td>LINAGORA</td>
+          </tr>
+          <tr>
+            <td>Portail d’authentification unique (RIE)
             </td>
             <td>En production
             </td>
@@ -534,6 +548,26 @@ eleventyNavigation:
             <td>En production</td>
             <td>CISIRH</td>
           </tr>
+          <tr>
+            <td>SICARDI (non DSFR)</td>
+            <td>En production</td>
+            <td>CISIRH</td>
+          </tr>
+          <tr>
+            <td>SICARDI (DSFR)</td>
+            <td>En production</td>
+            <td>CISIRH</td>
+          </tr>
+          <tr>
+            <td>Portail du BARRI</td>
+            <td>En production</td>
+            <td>CISIRH</td>
+          </tr>
+          <tr>
+            <td>Espace Noyau RH FPE</td>
+            <td>En production</td>
+            <td>CISIRH</td>
+          </tr>
         </table>
         <p>Le CISIRH effectue lui-même les corrections sur les applications dont il est propriétaire du code HTML.
         </p>
@@ -545,7 +579,7 @@ eleventyNavigation:
         <p>A l’issue de chaque audit, le CISIRH intègre à la page d’accueil de chacune de ses applications des liens menant à :</p>
         <ul>
           <li> une <strong>déclaration d’accessibilité</strong>, document justifiant du niveau de conformité au RGAA ;</li>
-          <li><strong>l’indication d’un moyen permettant aux usagers
+          <li><strong>l’indication d’un moyen permettant aux usagers 
           de signaler les manquements</strong> aux règles d’accessibilité de l’application ;</li>
           <li> le <strong>Schéma pluriannuel de mise en accessibilité</strong> et le plan d’action de l’année en cours.</li>
 
@@ -562,7 +596,7 @@ eleventyNavigation:
               <li>détaillant ces fonctionnalités,</li>
               <li>respectant les normes décrites dans les Règles européennes pour une information facile à lire et à comprendre;</li>
             </ul>
-            </li>
+            </li> 
           <li>un expert FALC des Papillons blancs de Paris relit et corrige le guide en collaboration avec le CISIRH;</li>
           <li>des sessions de relecture et de tests sont organisées avec des personnes en situation de handicap intellectuel et des experts FALC des Papillons blancs;</li>
           <li>le CISIRH modifie le guide conformément aux résultats de ces sessions;</li>
@@ -576,7 +610,7 @@ eleventyNavigation:
         <h2>
           <div id="plans">4. Plans annuels</div>
         </h2>
-
+   
 
 
         <h3>
@@ -584,7 +618,7 @@ eleventyNavigation:
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025</caption>
-
+        
           <tr>
             <th id="fus1.2" colspan="3" rowspan="1">Correctifs prévus pour 2024</th>
           </tr>
@@ -617,7 +651,7 @@ eleventyNavigation:
             </td>
           </tr>
           <tr>
-            <td headers="fus1.2">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
+            <td headers="fus1.2">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
             </td>
             <td headers="fus1.2">Suppression des informations données exclusivement par la forme, taille ou position <!-- 10.9 -->
             </td>
@@ -659,7 +693,7 @@ eleventyNavigation:
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025</caption>
-
+          
 
           <tr>
             <th id="fus2.2" colspan="3" rowspan="1">Correctifs prévus pour 2024</th>
@@ -696,7 +730,7 @@ eleventyNavigation:
             <td headers="fus2.2">Correction du contrôle de saisie au sein des formulaires <!-- 11.10 -->
 
             </td>
-
+          
           </tr>
 
           <tr>
@@ -706,7 +740,7 @@ eleventyNavigation:
             <td headers="fus2.3">Possibilité pour l’utilisateur de contrôler chaque limite de temps modifiant le contenu <!-- 13.1 -->
 
             </td>
-
+          
           </tr>
 
         </table>
@@ -715,7 +749,7 @@ eleventyNavigation:
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025</caption>
-
+       
           <tr>
             <th id="fus3.2" colspan="3" rowspan="1">Correctifs prévu pour 2024</th>
           </tr>
@@ -758,9 +792,9 @@ eleventyNavigation:
             <td headers="fus3.3">Amélioration de la visibilité du focus <!-- 10.7 -->
 
             </td>
-
+           
           </tr>
-
+       
 
         </table>
         <h3>
@@ -768,8 +802,8 @@ eleventyNavigation:
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025</caption>
-
-
+       
+          
 
 
           <tr>
@@ -804,9 +838,9 @@ eleventyNavigation:
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025</caption>
-
+        
           <tr>
-
+            
 
           </tr>
 
@@ -926,9 +960,9 @@ eleventyNavigation:
             <td headers="fus7">Amélioration de la visibilité du focus <!-- 10.7 -->
 
             </td>
-
+          
           </tr>
-
+          
           <tr>
             <th id="fus7.2" colspan="3" rowspan="1">Correctifs en cours de planification</th>
           </tr>
@@ -940,7 +974,7 @@ eleventyNavigation:
             <td headers="fus7.2">Augmentation du contraste des couleurs des éléments graphiques porteurs d’informations <!-- 3.3 -->
             </td>
           </tr>
-
+         
           <tr>
             <td headers="fus7.2">Correction du lien entre les tableaux de données et leurs titres <!-- 5.4 -->
             </td>
@@ -982,7 +1016,7 @@ eleventyNavigation:
             </td>
             <td headers="fus7.2">Traitement de l’information afin que celle-ci reste visible lorsque les feuilles de style sont désactivées <!-- 10.3 -->
             </td>
-            <td headers="fus7.2">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
+            <td headers="fus7.2">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
             </td>
           </tr>
 
@@ -1000,10 +1034,10 @@ eleventyNavigation:
             </td>
             <td headers="fus7.2">Possibilité pour l’utilisateur de contrôler chaque limite de temps modifiant le contenu <!-- 13.1 -->
             </td>
-
+           
           </tr>
-
-
+          
+          
 
         </table>
 
@@ -1012,7 +1046,7 @@ eleventyNavigation:
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025</caption>
-
+          
 
           <tr>
             <th id="fus8.2" colspan="3" rowspan="1">Correctifs prévus pour 2024</th>
@@ -1059,7 +1093,7 @@ eleventyNavigation:
             <td headers="fus8.2">Ajout d’une version accessible aux documents bureautiques en téléchargement inaccessibles <!-- 13.3 -->
 
             </td>
-
+           
           </tr>
           <tr>
             <th id="fus8.3" colspan="3" rowspan="1">Correctifs prévus pour 2025</th>
@@ -1071,7 +1105,7 @@ eleventyNavigation:
             <td headers="fus8.3">Traitement de l’information afin que celle-ci reste visible lorsque les feuilles de style sont désactivées <!-- 10.3 -->
 
             </td>
-            <td headers="fus8.3">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
+            <td headers="fus8.3">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
 
 
             </td>
@@ -1090,84 +1124,51 @@ eleventyNavigation:
         </table>
 
         <h3>
-          <div id="messager">4.9. CISIRH Messager</div>
+          <div id="sicardi_dsfr">4.9. SICARDI (DSFR)</div>
         </h3>
         <table>
-          <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024</caption>
-          <tr>
-            <th id="fus9" colspan="3" rowspan="1">Correctifs prévus pour 2024</th>
-          </tr>
-          <tr>
-            <td headers="fus9">Augmentation du contraste entre la couleur des textes et la couleur de leurs arrière-plans <!-- 3.2 -->
-
-            </td>
-            <td headers="fus9">Augmentation du contraste des couleurs des éléments graphiques porteurs d’informations <!-- 3.3 -->
-
-            </td>
-            <td headers="fus9">Ajout dans le code source d’un indicateur de changement de langue à chaque changement de langue <!-- 8.3 -->
-
-
-            </td>
-          </tr>
-          <tr>
-            <td headers="fus9">Structuration de l’information par des titres appropriés <!-- 9.1 -->
-
-            </td>
-            <td headers="fus9">Mise en cohérence de la structure de chaque page web <!-- 9.2 -->
-
-            </td>
-            <td headers="fus9">Amélioration de la visibilité du focus <!-- 10.7 -->
-
-            </td>
-          </tr>
-          <tr>
-            <td headers="fus9">Présentation des contenus afin qu’ils puissent être restitués sans avoir recours à la fois à un défilement vertical pour une fenêtre ayant une hauteur de 256px ou à un défilement horizontal pour une fenêtre ayant une largeur de 320px <!-- 10.11 -->
-
-            </td>
-            <td headers="fus9">Possibilité de redéfinition par l’utilisateur des propriétés d’espacement du texte sans perte de contenus ou de fonctionnalités <!-- 10.12 -->
-
-            </td>
-            <td headers="fus9">Possibilité de rendre visible au clavier les contenus additionnels apparaissant via les styles CSS uniquement <!-- 10.13 -->
-            </td>
-          </tr>
-          <tr>
-
-            <td headers="fus9">Possibilité d’atteindre ou d’éviter les zones de regroupement de contenus <!-- 12.6 -->
-
-            </td>
-            <td headers="fus9">Ajout d’un lien d’évitement permettant l’accès rapide à la zone de contenu principal <!-- 12.7 -->
-
-            </td>
-            <td headers="fus9">Correction de l’ordre de tabulation <!-- 12.8 -->
-
-            </td>
-          </tr>
-          <tr>
-            <td headers="fus9">Possibilité pour l’utilisateur de consulter le contenu proposé quelle que soit l’orientation de son écran (portrait ou paysage) <!-- 13.9 -->
-
-            </td>
-            <td headers="fus9">Ajout de descriptions détaillées aux images porteuses d’information <!-- 1.6 -->
-
-            </td>
-            <td headers="fus9">Ajout d’une version accessible aux documents bureautiques en téléchargement inaccessibles <!-- 13.3 -->
-
-
-            </td>
-          </tr>
-
-
-
-
-
+<caption>Correctifs d'accessibilité: présentation des correctifs en cours de planification</caption>
+<tr>
+  <th id="fus9.1" colspan="3" rowspan="1">Correctifs en cours de planification</th>
+</tr>
+<tr>
+  <td headers="fus9.1">Correction des descriptions détaillées associées aux images porteuses d’information<!--1.7--></td>
+  <td headers="fus9.1">Ajout d’un intitulé à chaque lien<!--6.2--></td>
+  <td headers="fus9.1">Mise en compatibilité des scripts avec les technologies d’assistance<!--7.1--></td>
+</tr>
+<tr>
+  <td headers="fus9.1">Contrôle des scripts par le clavier<!--7.3--></td>
+  <td headers="fus9.1">Correction des erreurs du code source susceptibles d’affecter l’accessibilité<!--8.2--></td>
+  <td headers="fus18.1">Traitement de l’information afin que celle-ci reste visible lorsque les feuilles de style sont désactivées<!--10.3--></td>
+</tr>
+<tr>
+  <td headers="fus9.1">Ajout d’une étiquette à chaque champ de formulaire<!--11.1--></td>
+  <td headers="fus9.1">Ajout d’un lien d’évitement permettant l’accès rapide à la zone de contenu principal<!--12.7--></td>
+  <td headers="fus9.1">Emploi de la technique appropriée pour associer les cellules de tableaux de données avec leurs en-têtes<!--5.7--></td>
+</tr>
+<tr>
+  <td headers="fus9.1">Présence de l’intégralité du contenu visible porteur d’information en cas de désactivation des feuilles de style<!--10.2--></td>
+  <td headers="fus9.1">Correction des étiquettes associées à chaque champ de formulaire<!--11.2--></td>
+  <td headers="fus9.1">Traitement des images de décoration<!--1.2--></td>
+</tr>
+<tr>
+  <td headers="fus9.1">Suppression des informations données exclusivement par la forme, taille ou position<!--10.9--></td>
+  <td headers="fus9.1">Ajout d’une version accessible aux documents bureautiques en téléchargement inaccessibles<!--13.3--></td>
+  <td headers="fus9.1">Correction des messages de statut afin qu’ils puissent être correctement restitués par les technologies d’assistance<!--7.5--></td>
+</tr>
+<tr>
+  <td headers="fus9.1">Possibilité pour l’utilisateur de contrôler chaque limite de temps modifiant le contenu<!--13.1--></td>
+</tr>
         </table>
+
 
         <h3>
           <div id="rebecca">4.10. <span lang="en">Chatbot</span> Rebecca</div>
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2025</caption>
-
-
+        
+         
 
           <tr>
             <th id="fus10.2" colspan="3" rowspan="1">Correctifs prévus pour 2025</th>
@@ -1179,7 +1180,7 @@ eleventyNavigation:
             </td>
             <td headers="fus10.2">Correction du contrôle de saisie au sein des formulaires <!-- 11.10 --></td>
           </tr>
-
+        
           <tr>
             <td headers="fus10.2">Correction de l’ordre de tabulation <!-- 12.8 -->
 
@@ -1192,7 +1193,7 @@ eleventyNavigation:
 
             </td>
           </tr>
-
+         
           <tr>
             <td headers="fus10.2">Présentation des contenus afin qu’ils puissent être restitués sans avoir recours à la fois à un défilement vertical pour une fenêtre ayant une hauteur de 256px ou à un défilement horizontal pour une fenêtre ayant une largeur de 320px <!-- 10.11 -->
 
@@ -1211,17 +1212,18 @@ eleventyNavigation:
             <td headers="fus10.2">Possibilité d’atteindre ou d’éviter les zones de regroupement de contenus <!-- 12.6 -->
 
             </td>
-
+           
           </tr>
 
         </table>
+       
         <h3>
           <div id="greco">4.11. GRECO</div>
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025</caption>
-
-
+      
+          
           <tr>
             <th id="fus11.2" colspan="3" rowspan="1">Correctifs prévus pour 2024</th>
           </tr>
@@ -1307,7 +1309,7 @@ eleventyNavigation:
             <td headers="fus11.3">Mise en compatibilité des scripts avec les technologies d’assistance <!-- 7.1 -->
 
             </td>
-            <td headers="fus11.3">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
+            <td headers="fus11.3">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
 
 
             </td>
@@ -1340,11 +1342,11 @@ eleventyNavigation:
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025</caption>
-
+      
           <tr>
             <th id="fus12.2" colspan="3" rowspan="1">Correctifs prévus pour 2024</th>
           </tr>
-
+          
           <tr>
             <td headers="fus12.2">Correction des alternatives textuelles associées aux images porteuses d’information <!-- 1.3 -->
 
@@ -1425,8 +1427,8 @@ eleventyNavigation:
         </h3>
         <table>
           <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025</caption>
-
-
+       
+         
           <tr>
             <th id="fus13.2" colspan="3" rowspan="1">Correctifs prévus pour 2024</th>
           </tr>
@@ -1500,7 +1502,7 @@ eleventyNavigation:
             <td headers="fus13.2">Traitement de l’information afin que celle-ci reste visible lorsque les feuilles de style sont désactivées <!-- 10.3 -->
 
             </td>
-            <td headers="fus13.2">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
+            <td headers="fus13.2">Lisibilité du texte lorsque la taille des caractères est augmentée jusqu’à 200 % <!-- 10.4 -->
             </td>
           </tr>
           <tr>
@@ -1513,7 +1515,7 @@ eleventyNavigation:
             <td headers="fus13.2">Utilisation de feuilles de style pour contrôler la présentation de l’information <!-- 10.1 -->
             </td>
           </tr>
-
+       
 
           <tr>
             <th id="fus13.3" colspan="3" rowspan="1">Correctifs prévus pour 2025</th>
@@ -1583,86 +1585,43 @@ eleventyNavigation:
           <td headers="fus14.3">Ajout d’alternatives textuelles aux images porteuses d’information<!-- 1.1 --></td>
         </tr>
         <tr>
-
+        
           <td headers="fus14.3">Ajout de descriptions détaillées aux images porteuses d’information<!-- 1.6 --></td>
           <td headers="fus14.3">Ajout d’un titre de cadre aux cadres<!-- 2.1 --></td>
           <td headers="fus14.3">Utilisation de feuilles de style pour contrôler la présentation de l’information<!-- 10.1 --></td>
         </tr>
         <tr>
-
+       
           <td headers="fus14.3">Présence de l’intégralité du contenu visible porteur d’information en cas de désactivation des feuilles de style<!-- 10.2 --></td>
           <td headers="fus14.3">Suppression des informations données exclusivement par la forme, taille ou position<!-- 10.9 --></td>
         </tr>
-
+      
         </table>
 
         <h3>
           <div id="riga">4.15. RIGA</div>
         </h3>
 <table>
-<caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024</caption>
+<caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2025 et des correctifs en cours de planification</caption>
 <tr>
-  <th id="fus15.2" colspan="3" rowspan="1">Correctifs prévus pour 2024</th></tr>
+  <th id="fus15.2" colspan="3" rowspan="1">Correctifs prévus pour 2025</th></tr>
 <tr>
-  <td headers="fus15.2">Traitement des images de décoration<!--1.2--></td>
-  <td headers="fus15.2">Remplacement des images texte porteuses d’information par du texte stylé<!--1.8--></td>
-  <td headers="fus15.2">Augmentation du contraste entre la couleur des textes et la couleur de leurs arrière-plans<!--3.2--></td>
+  <td headers="fus15.2">Ajout d’alternatives vides aux images de décoration<!--1.2--></td>
+  <td headers="fus15.2">Augmentation du contraste entre les couleurs des éléments graphiques porteurs d’informations et les couleurs de leurs arrière-plans<!--3.3--></td>
+  <td headers="fus15.2">Structuration de l’information par une hiérarchie de titres pertinente<!--9.1--></td>
 </tr>
 <tr>
-  <td headers="fus15.2">Augmentation du contraste des couleurs des éléments graphiques porteurs d’informations<!--3.3--></td>
-  <td headers="fus15.2">Correction du lien entre les tableaux de données et leurs titres<!--5.4--></td>
-  <td headers="fus15.2">Emploi de la technique appropriée pour associer les cellules de tableaux de données avec leurs en-têtes<!--5.7--></td>
-</tr>
-<tr>
-  <td headers="fus15.2">Explicitation des liens<!--6.1--></td>
-  <td headers="fus15.2">Ajout d’un intitulé à chaque lien<!--6.2--></td>
-  <td headers="fus15.2">Mise en compatibilité des scripts avec les technologies d’assistance<!--7.1--></td>
-</tr>
-<tr>
-  <td headers="fus15.2">Correction des titres de page associés aux pages web<!--8.6--></td>
-  <td headers="fus15.2">Ajout dans le code source d’un indicateur de changement de langue à chaque changement de langue<!--8.7--></td>
-  <td headers="fus15.2">Structuration de l’information par des titres appropriés<!--9.1--></td>
-</tr>
-<tr>
-  <td headers="fus15.2">Mise en cohérence de la structure de chaque page web<!--9.2--></td>
-  <td headers="fus15.2">Correction de la structuration des listes<!--9.3--></td>
-  <td headers="fus15.2">Présence de l’intégralité du contenu visible porteur d’information en cas de désactivation des feuilles de style<!--10.2--></td>
-</tr>
-<tr>
-  <td headers="fus15.2">Traitement de l’information afin que celle-ci reste visible lorsque les feuilles de style sont désactivées<!--10.3--></td>
-  <td headers="fus15.2">Ajout de déclarations CSS de couleurs de fond d’élément et de police<!--10.5--></td>
-  <td headers="fus15.2">Amélioration de la visibilité du focus<!--10.7--></td>
-</tr>
-<tr>
-  <td headers="fus15.2">Suppression des contenus cachés présents dans les pages et n’ayant pas vocation à être ignorés par les technologies d’assistance<!--10.8--></td>
-  <td headers="fus15.2">Présentation des contenus afin qu’ils puissent être restitués sans avoir recours à la fois à un défilement vertical pour une fenêtre ayant une hauteur de 256px ou à un défilement horizontal pour une fenêtre ayant une largeur de 320px<!--10.11--></td>
-  <td headers="fus15.2">Contrôle par l’utilisateur des contenus additionnels apparaissant à la prise de focus ou au survol d’un composant d’interface<!--10.13--></td>
-</tr>
-<tr>
+  <td headers="fus15.2">Insertion via HTML et non CSS des contenus n’ayant pas vocation à être ignorés par les technologies d’assistance<!--10.8--></td>
   <td headers="fus15.2">Ajout d’une étiquette à chaque champ de formulaire<!--11.1--></td>
-  <td headers="fus15.2">Correction des étiquettes associées à chaque champ de formulaire<!--11.2--></td>
-  <td headers="fus15.2">Correction des intitulés des boutons au sein des formulaires<!--11.9--></td>
 </tr>
+
+<tr><th id="fus15.3" colspan="3" rowspan="1">Correctifs en cours de planification</th></tr>
 <tr>
-  <td headers="fus15.2">Possibilité d’atteindre ou d’éviter les zones de regroupement de contenus<!--12.6--></td>
-  <td headers="fus15.2">Ajout d’un lien d’évitement permettant l’accès rapide à la zone de contenu principal<!--12.7--></td>
-  <td headers="fus15.2">Ajout d’une version accessible aux documents bureautiques en téléchargement inaccessibles<!--13.3--></td>
-</tr>
-<tr>
-  <td headers="fus15.2">Possibilité d’annulation pour chaque action déclenchée au moyen d’un dispositif de pointage sur un point unique de l’écran<!--13.11--></td>
-  <td headers="fus15.2">Contrôle des scripts par le clavier<!--7.3--></td>
-  <td headers="fus15.2">Correction de l’ordre de tabulation<!--12.8--></td>
-</tr>
-<tr>
-  <td headers="fus15.2">Correction des messages de statut afin qu’ils puissent être correctement restitués par les technologies d’assistance<!--7.5--></td>
-  <td headers="fus15.2">Possibilité pour l’utilisateur de contrôler chaque limite de temps modifiant le contenu<!--13.1--></td>
-  <td headers="fus15.2">Suppression des informations données exclusivement par la forme, taille ou position<!--10.9--></td>
-</tr>
-<tr>
-  <td headers="fus15.2">Correction du contrôle de saisie au sein des formulaires<!--11.10--></td>
-  <td headers="fus15.2">Suppression des informations données uniquement par la couleur<!--3.1--></td>
+  <td headers="fus15.3">Ajout d’une version accessible aux documents bureautiques en téléchargement inaccessibles<!--13.3--></td>
 
 </tr>
+
+
 </table>
 
 <h3>
@@ -1672,7 +1631,7 @@ eleventyNavigation:
   <caption>Correctifs d'accessibilité: présentation des correctifs prévus pour 2024 et 2025 et des correctifs en cours de planification</caption>
   <tr>
     <th id="fus16.2" colspan="3" rowspan="1">Correctifs prévus pour 2024</th></tr>
-
+    
     <tr>
       <td headers="fus16.2">Traitement des images de décoration<!--1.2--></td>
       <td headers="fus16.2">Ajout dans le code source d’un indicateur de changement de langue à chaque changement de langue<!--8.7--></td>
@@ -1689,7 +1648,7 @@ eleventyNavigation:
     <tr>
       <td headers="fus16.4">Possibilité d’annulation pour chaque action déclenchée au moyen d’un dispositif de pointage sur un point unique de l’écran<!--13.11--></td>
       <td headers="fus16.4">Ajout d’une version accessible aux documents bureautiques en téléchargement inaccessibles<!--13.3--></td>
-
+    
     </tr>
 
     </table>
@@ -1712,55 +1671,28 @@ eleventyNavigation:
           <td headers="fus17.3">Correction des étiquettes associées à chaque champ de formulaire<!--11.2--></td>
           <td headers="fus17.3">Ajout d’un lien d’évitement permettant l’accès rapide à la zone de contenu principal<!--12.7--></td>
         </tr>
-
+    
         <tr><th id="fus17.4" colspan="3" rowspan="1">Correctifs en cours de planification</th></tr>
         <tr>
           <td headers="fus17.4">Avertissement ou prise de contrôle par l’utilisateur de tout script qui initie un changement de contexte<!--7.4--></td>
           <td headers="fus17.4">Possibilité d’annulation pour chaque action déclenchée au moyen d’un dispositif de pointage sur un point unique de l’écran<!--13.11--></td>
           <td headers="fus17.4">Ajout d’une version accessible aux documents bureautiques en téléchargement inaccessibles<!--13.3--></td>
         </tr>
-
+       
         </table>
-
 
         <h3>
-          <div id="sicardi_dsfr">4.18. SICARDI (DSFR)</div>
+          <div id="messager">4.18. CISIRH Messager</div>
         </h3>
-        <table>
-<caption>Correctifs d'accessibilité: présentation des correctifs en cours de planification</caption>
-<tr>
-  <th id="fus18.1" colspan="3" rowspan="1">Correctifs en cours de planification</th>
-</tr>
-<tr>
-  <td headers="fus18.1">Correction des descriptions détaillées associées aux images porteuses d’information<!--1.7--></td>
-  <td headers="fus18.1">Ajout d’un intitulé à chaque lien<!--6.2--></td>
-  <td headers="fus18.1">Mise en compatibilité des scripts avec les technologies d’assistance<!--7.1--></td>
-</tr>
-<tr>
-  <td headers="fus18.1">Contrôle des scripts par le clavier<!--7.3--></td>
-  <td headers="fus18.1">Correction des erreurs du code source susceptibles d’affecter l’accessibilité<!--8.2--></td>
-  <td headers="fus18.1">Traitement de l’information afin que celle-ci reste visible lorsque les feuilles de style sont désactivées<!--10.3--></td>
-</tr>
-<tr>
-  <td headers="fus18.1">Ajout d’une étiquette à chaque champ de formulaire<!--11.1--></td>
-  <td headers="fus18.1">Ajout d’un lien d’évitement permettant l’accès rapide à la zone de contenu principal<!--12.7--></td>
-  <td headers="fus18.1">Emploi de la technique appropriée pour associer les cellules de tableaux de données avec leurs en-têtes<!--5.7--></td>
-</tr>
-<tr>
-  <td headers="fus18.1">Présence de l’intégralité du contenu visible porteur d’information en cas de désactivation des feuilles de style<!--10.2--></td>
-  <td headers="fus18.1">Correction des étiquettes associées à chaque champ de formulaire<!--11.2--></td>
-  <td headers="fus18.1">Traitement des images de décoration<!--1.2--></td>
-</tr>
-<tr>
-  <td headers="fus18.1">Suppression des informations données exclusivement par la forme, taille ou position<!--10.9--></td>
-  <td headers="fus18.1">Ajout d’une version accessible aux documents bureautiques en téléchargement inaccessibles<!--13.3--></td>
-  <td headers="fus18.1">Correction des messages de statut afin qu’ils puissent être correctement restitués par les technologies d’assistance<!--7.5--></td>
-</tr>
-<tr>
-  <td headers="fus18.1">Possibilité pour l’utilisateur de contrôler chaque limite de temps modifiant le contenu<!--13.1--></td>
-</tr>
-        </table>
+        <p>Pas de correctifs d'accessiblité en attente (conformité totale du site aux critères de contrôle du RGAA).</p>
+
+        
+     
 
 
       </div>
     </main>
+  </div>
+  <footer>
+    <div class="fixed-footer">Centre Interministériel de Services Informatiques Relatifs aux Ressources Humaines: Schéma pluriannuel d'accessibilité 2023-2025 - Version 2024</div>
+  </footer>
