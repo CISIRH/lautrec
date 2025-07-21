@@ -24,7 +24,7 @@ L’hébergement du site est assuré par les services informatiques du CISIRH.
 
 ## Crédits
 
-- [1F3DB.svg](https://openmoji.org/data/color/svg/1F3DB.svg) par [Martin Wehl](https://openmoji.org/library/#author=Martin%20Wehl) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0>).
+[1F3DB.svg](https://openmoji.org/data/color/svg/1F3DB.svg) par [Martin Wehl](https://openmoji.org/library/#author=Martin%20Wehl) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0>).
 
 
 [ A COMPLETER ]
