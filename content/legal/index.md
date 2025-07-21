@@ -11,7 +11,7 @@ showBreadcrumb: true
 
 ## Directeur de la publication
 
-[ A COMPLETER ]
+Le directeur de publication du site est Aurélien Louche, référent accessibilité numérique du CISIRH.
 
 ## Prestataire d'hébergement
 
