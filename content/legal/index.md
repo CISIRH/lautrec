@@ -1,6 +1,6 @@
 ---
 title: Mentions légales
-layout: layouts/page.njk
+layout: layouts/post.njk
 description: Mentions légales à compléter
 slugOverride: legal
 showBreadcrumb: true
