@@ -1,8 +1,8 @@
 ---
-title: Exemple de mentions légales
+title: Mentions légales
 layout: layouts/page.njk
 description: Mentions légales à compléter
-slugOverride: mentions legales
+slugOverride: legal
 showBreadcrumb: true
 ---
 ## Identification de l'éditeur
