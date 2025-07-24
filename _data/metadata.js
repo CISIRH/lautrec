@@ -1,5 +1,5 @@
 module.exports = {
-    title: "LAUTREC - L'Accessibilité nUmérique des ouTils REcensés au CISIRH",
+    title: "LAUTREC - L'accessibilité numérique des outils recensés au CISIRH",
     url: "https://cisirh.github.io/lautrec",
     newsletter: [
         {
