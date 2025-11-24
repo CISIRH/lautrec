@@ -641,7 +641,7 @@ pre[class*="language-"] {
       <b>partiellement conforme avec le RGAA 4.1</b>. Partiellement conforme veut dire que certaines sections du contenu ne sont pas entièrement conformes aux standards d'accessibilités.
     </p>
     <h2>Résultats des tests</h2>
-    <p>L’audit de conformité réalisé en interne, par une personne non impliquée dans le développement de l'application, révèle que 77,55% des critères RGAA sont respectés.</p>
+    <p>L’audit de conformité réalisé en interne, par une personne non impliquée dans le développement de l'application, révèle que 81,63% des critères RGAA sont respectés.</p>
 
     <h2>Contenus non accessibles</h2>
 
@@ -650,29 +650,26 @@ pre[class*="language-"] {
     <ol>
      
       <li><strong>Linéarisation et identification des tableaux de mise en forme</strong>: l'absence d'identification de certains tableaux de mise en forme peut causer des difficultés de compréhension pour les utilisateurs de lecteur d'écran parcourant le
-        contenu de manière séquentielle.</li>
+        contenu de manière séquentielle.</li><!--5.3-->
       <li><strong>Compatibilité des scripts avec l'accessibilité</strong>: deux composants d'interface riche (fenêtre modale et affichage des contenus de bloc) n'utilisent pas les modèles de comportement au clavier fournis par les modèles de conception liés
-        à l'API ARIA, ce qui rend leur accès difficile pour les utilisateurs de lecteurs d'écran et pour les utilisateurs ayant besoin d'interactions riches au clavier.</li>
+        à l'API ARIA, ce qui rend leur accès difficile pour les utilisateurs de lecteurs d'écran et pour les utilisateurs ayant besoin d'interactions riches au clavier.</li><!--7.1-->
       <li><strong>Utilisation des balises à bon escient</strong>: certaines balises sont utilisées uniquement à des fins de présentation (présence de paragraphes vides), ce qui rend la restitution du contenu complexe pour les utilisateurs de lecteurs d'écran
-        (génération de silences).</li>
-      <li><strong>Structuration du document HTML5</strong>: certains éléments de structure du document en HTML5 sont manquants, ce qui rend inopérant les moyens de navigation rapide fondés sur ces éléments et proposés par les lecteurs d'écrans et certains
-        <span lang="en">plug-ins</span> de navigateurs.</li>
+        (génération de silences).</li><!--8.9-->
       <li><strong>Affichage de la présentation à l'aide des feuilles de style</strong>: certains effets de présentation ne reposent pas intégralement sur l'utilisation de styles CSS, ce qui peut rendre le contenu impossible à personnaliser et à adapter aux
-        capacités des déficients visuels.</li>
-      <li><strong>Personnalisation de l'affichage</strong>: la taille de certains contenus est insuffisamment personnalisable, ce qui peut rendre compliquée leur lecture pour les utilisateurs de logiciels d'agrandissement.</li>
+        capacités des déficients visuels.</li><!--10.1-->
+      <li><strong>Perte d'informations lors du redimensionnement du contenu</strong>: le passage en vue réactive provoque une perte d'informations.</li><!--10.11-->
       <li><strong>Identification des champs de formulaires</strong>: certains champs de saisie de formulaires sont dépourvus d'étiquette, ce qui peut occasionner des difficultés majeures à remplir le formulaire pour les utilisateurs de lecteurs d'écrans,
-        de loupes vocalisées ou de systèmes de contrôles vocaux.</li>
-      <li><strong>Contrôle et aide à la saisie</strong>: les indicateurs de champ obligatoire de formulaire et les contrôle de saisie existent mais comportent des erreurs d'accessibilité rendant difficile la complétion des champs de formulaire par des utilisateurs
-        en situation de handicap.</li>
-      <li><strong>Système de navigation de la page</strong>: les zones de regroupement de contenus ne sont pas identifiées (zones d'en-tête, de contenu principal, de pied de page et de moteur de recherche) et ne bénéficient pas de lien d'accès rapide (zone
-        de contenu principal), ce qui peut compliquer la navigation des utilisateurs en situation de handicap.</li>
+        de loupes vocalisées ou de systèmes de contrôles vocaux.</li><!--11.1-->
+      <li><strong>Contrôle de saisie</strong>: les indicateurs de champ obligatoire de formulaire existent mais comportent des erreurs d'accessibilité rendant difficile la complétion des champs de formulaire par des utilisateurs
+        en situation de handicap.</li><!--11.10-->
+      <li><strong>Système de navigation non pertinent</strong>: aucun lien d'évitement ne permet d'aller directement au contenu principal de la page, ce qui peut rendre la navigation laborieuse pour de nombreux utilisateurs en situation de handicap.</li><!--12.7-->
       <li><strong>Cohérence de l'ordre de tabulation</strong>: l'ordre de tabulation au sein des listes d'éléments contient des incohérences qui peuvent rendre difficile l'exploration des contenus pour les utilisateurs naviguant exclusivement au clavier.</li>
-    </ol>
+    </ol><!--12.8-->
     <p>L'ensemble de ces points de non conformité est intégré aux plans d'action annuels du <a href="../../schema-pluriannuel">schéma pluriannuel de mise en accessibilité du CISIRH</a>.</p>
     <h3>Dérogations pour charge disproportionnée</h3>
     <p>Le CISIRH n'invoque la dérogation temporaire pour charge disproportionnée sur aucune section, aucun contenu et aucune fonction de l'application.</p>
     <h2>Établissement de cette déclaration d'accessibilité</h2>
-    <p>Cette déclaration a été mise à jour le <b>3 mars 2025</b>.</p>
+    <p>Cette déclaration a été mise à jour le <b>24 novembre 2025</b>.</p>
     <h2>Amélioration et contact</h2>
     <p>Si vous n’arrivez pas à accéder à un contenu ou à un service en raison d'un défaut d'adaptation de l'application à votre handicap, vous pouvez contacter le responsable accessibilité du <span lang="en">chatbot</span> Rebecca pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
     <ul>
