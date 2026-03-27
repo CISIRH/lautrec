@@ -14,44 +14,39 @@ eleventyNavigation:
       <b>partiellement conforme avec le RGAA 4.1</b>. Partiellement conforme veut dire que certaines sections du contenu ne sont pas entièrement conformes aux standards d'accessibilités.
     </p>
     <h2>Résultats des tests</h3>
-    <p>L’audit de conformité réalisé en interne, par une personne non impliquée dans le développement du site, révèle que 70,69% des critères RGAA applicables sont respectés.</p>
+    <p>L’audit de conformité réalisé en interne, par une personne non impliquée dans le développement du site, révèle que 67,24% des critères RGAA applicables sont respectés.</p>
 
     <h3>Contenus non accessibles</h2>
 
     <h3>Non conformité</h3>
     <p>Malgré nos efforts, certains contenus sont inaccessibles. Vous trouverez ci-dessous une liste des limitations connues :</p>
     <ol>
-      <li><strong>Images de décoration sans alternatives vides</strong>: des images de décoration sont renseignées, ce qui produit de l'information inutile pour les utilisateurs de lecteurs d'écrans et de systèmes de vocalisations couplés aux logiciels d'agrandissement.</li>
-      <li><strong>Défaut de lisibilité des contenus</strong>: la lisibilité du contenu de certains textes et éléments graphiques porteurs d'information est dégradée du fait de l'utilisation de contrastes trop faibles avec leurs arrière-plans.</li>
-      <li><strong>Liens sans intitulés</strong>: certains liens n'ont pas d'intitulés, ce qui rend leur contenu inexploitable par les utilisateurs de lecteurs d'écran.</li>
-      <li><strong>Scripts incompatibles avec l'accessibilité</strong>: certains composants riches développés avec JavaScript (système d'onglets et fenêtres modales) ne sont pas conformes aux modèles de comportement au clavier fournis par les modèles de conception
-        ARIA.
-      </li>
-      <li><strong>Code source non valide</strong>: le code source de l'application comporte des attributs obsolètes susceptibles d'affecter l'accessibilité de l'application.</li>
-      <li><strong>Hiérarchie des titres non pertinentes</strong>: le titrage non pertinent rend inopérant certaines fonctionnalités de navigation proposées par les lecteurs d'écran, les navigateurs ou des plug-ins spécifiques.</li>
-      <li><strong>Défaut de structuration des listes</strong>: certains contenus sont fonctionnellement des listes, mais ne sont pas structurés comme des listes, ce qui rend ces contenus ambigus et désactive certaines fonctionnalités de navigation rapide
-        des lecteurs d’écran.</li>
-      <li><strong>Affichage de la présentation sans l'aide de feuilles de style</strong>: certains effets de présentation ne reposent pas intégralement sur l'utilisation de styles CSS, ce qui peut rendre le contenu impossible à personnaliser et à adapter
-        aux capacités des déficients visuels.</li>
-      <li><strong>Visibilité dégradée du focus</strong>: l'indication visuelle du focus est dégradée, ce qui rend complexe sa localisation par les utilisateurs naviguant exclusivement au clavier.</li>
-      <li><strong>Perte d'informations lors de la redéfinition des propriétés d'espacement du texte</strong>: les propriétés d'espacement du texte ne peuvent être redéfinies par l'utilisateur sans perte de contenus.</li>
-      <li><strong>Absence d'identification des champs de formulaires</strong>: certains formulaires contiennent des champs de saisie dépourvus d'étiquette, ce qui peut occasionner des difficultés majeures pour remplir les formulaires aux utilisateurs de lecteurs
-        d'écrans, de loupes vocalisées ou de systèmes de contrôle vocaux.</li>
-      <li><strong>Contrôle de la saisie</strong>: les indications de champs obligatoires ne répondent pas aux normes d'accessibilité.</li>
-      <li><strong>Ordre de tabulation incohérent</strong>: des incohérences dans l’ordre de tabulation compliquent l’exploration de certains contenus, la manipulation de certains éléments et l’enchaînement de certaines actions successives.</li>
-      <li><strong>Contrôle des limites de temps</strong>: l’utilisateur n’a pas de contrôle sur la mise à jour de certains contenus, ce qui peut empêcher l’accomplissement de la tâche ou la lecture du contenu par les personnes ayant recours à des technologies
-        d’assistance.
-      </li>
-      <li><strong>Fichiers en téléchargement</strong>: certains documents en téléchargement ne sont pas traités pour l’accessibilité et ne disposent pas d’alternatives accessibles aux aveugles et grands malvoyants.</li>
-      <li><strong>Absence de regroupement des champs de formulaires</strong>: les champs de formulaire de même nature ne sont pas regroupés, ce qui complique leur remplissage par des utilisateurs de lecteurs d'écrans, de loupes vocalisées ou de systèmes de
-        contrôle vocaux.</li>
+      <li>Défaut de lisibilité des contenus<strong></strong> : la lisibilité de certains textes est dégradée du fait de l'utilisation de contrastes trop faibles avec leurs arrière-plans.<!--3.2--></li>
+      <li><strong>Absence de liaisons programmatiques entre les cellules d'en-têtes de colonnes et les cellules de données des tableaux</strong> : certaines cellules d'en-têtes de colonnes ne sont ni identifiées, ni liées aux cellules de données, ce qui rend impossible l'association des cellules d'en-têtes et de données pour les utilisateurs de lecteurs d'écran, de loupes vocalisées ou pour les déficients visuels dépourvus de vision périphérique ou centrale.<!--5.7--></li>
+      <li><strong>Scripts incompatibles avec les technologies d’assistance</strong> : certains composants riches développés avec JavaScript (système d'onglets et fenêtres modales) ne sont pas conformes aux modèles de comportement au clavier fournis par les modèles de conception ARIA.<!--7.1 et 7.3--></li>
+      <li><strong>Messages de statut non identifiés</strong> : certains messages de statut ne sont pas codés conformément aux normes d’accessibilité, ce qui rend complexe leur restitution par les technologies d'assistance.<!--7.5--></li>
+      <li><strong>Utilisation des balises à bon escient</strong> : l’utilisation de certaines balises est détournée à des fins de présentation, ce qui peut provoquer des incompréhensions pour les utilisateurs de lecteurs d’écrans s’appuyant sur la sémantique de ces balises.<!--8.9--></li>
+      <li><strong>Hiérarchie des titres non pertinente</strong> : le titrage non pertinent rend inopérant certaines fonctionnalités de navigation proposées par les lecteurs d'écran, les navigateurs ou des <span lang="en">plug-ins</span> spécifiques.<!--9.1--></li>
+      <li><strong>Défaut de structuration du document HTML5</strong> : l'absence de certains éléments de structure du document en HTML5 rend inopérant les moyens de navigation rapide proposés par les lecteurs d'écrans ou des plug-ins spécifiques.<!--9.2--></li>
+      <li><strong>Affichage de la présentation sans l'aide de feuilles de style</strong> : certains effets de présentation ne reposent pas intégralement sur l'utilisation de styles CSS, ce qui peut rendre le contenu impossible à personnaliser et à adapter aux capacités des déficients visuels.<!--10.1--></li>
+      <li><strong>Présence d'informations dans les feuilles de style</strong> : certains contenus informatifs sont insérés via du CSS et ne sont donc pas restitués par les lecteurs d'écran ou les systèmes de loupes vocalisées.<!--10.2--></li>
+      <li><strong></strong>Défaut de personnalisation de l'affichage : certains contenus (taille des caractères et jeu de couleurs) ne sont pas personnalisables par les personnes en situation de handicap visuel.<!--10.5--></li>
+      <li><strong>Visibilité dégradée du focus</strong> : l'indication visuelle du focus est dégradée, ce qui rend complexe sa localisation par les utilisateurs naviguant exclusivement au clavier.<!--10.7--></li>
+      <li><strong>Insertion via CSS de contenus n’ayant pas vocation à être ignorés par les technologies d’assistance</strong> : certains contenus informatifs sont insérés via CSS, ce qui peut empêcher leur restitution par les lecteurs d’écran ou les systèmes de loupes vocalisées.<!--10.8--></li>
+      <li><strong>Perte d'informations lors du redimensionnement du contenu</strong> : le passage en vue réactive provoque une perte d'informations.<!--10.11--></li>
+      <li><strong>Absence d'identification des champs de formulaires</strong> : certains formulaires contiennent des champs de saisie dépourvus d'étiquette, ce qui peut occasionner des difficultés majeures pour remplir les formulaires aux utilisateurs de lecteurs d'écrans, de loupes vocalisées ou de systèmes de contrôle vocaux.<!--11.1--></li>
+      <li><strong>Contrôle de la saisie</strong> : les indications de champs obligatoires ne répondent pas aux normes d'accessibilité.<!--11.10--></li>
+      <li><strong>Accessibilité au clavier des contenus</strong> : certains contenus additionnels apparaissant au survol, à la prise de focus ou à l’activation d’un composant d’interface ne sont pas accessibles au clavier.<!--12.11--></li>
+      <li><strong>Contrôle des limites de temps</strong> : l’utilisateur n’a pas de contrôle sur la mise à jour de certains contenus, ce qui peut empêcher l’accomplissement de la tâche ou la lecture du contenu par les personnes ayant recours à des technologies d’assistance.<!--13.1--></li>
+      <li><strong>Fichiers en téléchargement</strong> : certains documents en téléchargement ne sont pas traités pour l’accessibilité et ne disposent pas d’alternatives accessibles aux aveugles et grands malvoyants.<!--13.3--></li>
+      
     </ol>
     <p>L'ensemble de ces points de non conformité est intégré aux plans d'action annuels du <a href="../../schema-pluriannuel">schéma pluriannuel de mise en accessibilité du CISIRH</a>.</p>
     <h3>Dérogation</h3>
     <p>Conformément au RGAA, le CISIRH invoque une dérogation relative au remplacement de l'image texte ESTEVE par du texte stylé. Il s'agit en effet d'une image vectorielle dont le texte n'est pas réel et constitue un effet graphique qui est l'identité
       et l'avatar du site. L'effet consiste en une déformation de police complexe qui est impossible à reproduire avec du texte stylé.</p>
     <h2>Établissement de cette déclaration d'accessibilité</h2>
-    <p>Cette déclaration a été établie le <b>20 juillet 2023</b>.</p>
+    <p>Cette déclaration a été établie le <b>27 mars 2026</b>.</p>
     <h2>Amélioration et contact</h2>
     <p>Si vous n’arrivez pas à accéder à un contenu ou à un service en raison d'un défaut d'adaptation de l'application à votre handicap, vous pouvez contacter le responsable accessibilité de ESTEVE pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
     <ul>
@@ -73,3 +68,4 @@ eleventyNavigation:
       <li>Contacter <a href="https://www.defenseurdesdroits.fr/saisir/delegues">le délégué du Défenseur des droits dans votre région</a></li>
       <li>Envoyer un courrier par la poste (gratuit, ne pas mettre de timbre) :<br> Défenseur des droits<br> Libre réponse 71120 75342 Paris CEDEX 07</li>
     </ul>
+
