@@ -636,18 +636,32 @@ pre[class*="language-"] {
       <b>partiellement conforme avec le RGAA 4.1</b>. Partiellement conforme veut dire que certaines sections du contenu ne sont pas entièrement conformes aux standards d'accessibilités.
     </p>
     <h2>Résultats des tests</h2>
-    <p>L’audit de conformité réalisé en interne, par une personne non impliquée dans le développement de l'application, révèle que 89,65% des critères RGAA sont respectés.</p>
+    <p>L’audit de conformité réalisé en interne, par une personne non impliquée dans le développement de l'application, révèle que 67,16% des critères RGAA sont respectés.</p>
     <h2>Contenus non accessibles</h2>
 
     <h3>Non conformité</h3>
     <p>Malgré nos efforts, certains contenus sont inaccessibles. Vous trouverez ci-dessous une liste des limitations connues :</p>
     <ol>
-<li><strong>Défaut de lisibilité des contenus :</strong> la lisibilité du contenu de certains textes est dégradée du fait de l'utilisation de contrastes trop faibles avec leurs arrière-plans.</li>
-<li><strong>Défaut de lisibilité des éléments graphiques porteurs d’informations : </strong>la lisibilité de certains éléments graphiques porteurs d’informations est dégradée du fait de l’utilisation de contrastes trop faibles avec leurs arrière-plans.</li>
-<li><strong>Défaut de personnalisation de l'affichage : </strong>certains contenus (taille des caractères et jeu de couleurs) ne sont pas personnalisables par les personnes en situation de handicap visuel.</li>
-<li><strong>Perte d'informations lors du redimensionnement du contenu : </strong> le passage en vue réactive provoque une perte d'informations.</li>
-<li><strong>Restitution des textes cachés par les technologies d’assistance :</strong>certains contrôles sont situés après les contenus qu’ils permettent d’afficher ou masquer, ce qui peut aboutir à des incompréhensions pour les utilisateurs des lecteur d’écran qui ont un accès séquentiel à l’information.</li>
-<li><strong>Messages de statut non identifiés :</strong>certains messages de statut ne sont pas codés conformément aux normes d’accessibilité, ce qui rend complexe leur restitution par les technologies d'assistance.</li>
+<li><strong>Alternatives aux images porteuses d’information :</strong> certaines images porteuses d’information n’ont pas d’alternatives textuelles, ce qui peut empêcher les utilisateurs de synthèses vocales ou de systèmes de vocalisation couplés avec un logiciel d’agrandissement d’accéder aux contenus.</li><!--1.1-->
+<li><strong>Défaut de pertinence des alternatives aux images porteuses d'information :</strong> certaines alternatives à des images porteuses d'information ne sont pas pertinentes, ce qui peut empêcher les utilisateurs de synthèses vocales ou de systèmes de vocalisations couplés aux logiciels d'agrandissement de comprendre des contenus.</li><!--1.3-->
+<li><strong>Lisibilité des textes en images :</strong> certains textes en images ne peuvent être ni agrandis, ni adaptés aux moyens de feuilles de style personnalisées pour modifier la police d'écriture et en utiliser une plus spécifique.</li><!--1.8-->
+<li><strong>Défaut de lisibilité des contenus :</strong> la lisibilité de certains textes est dégradée du fait de l'utilisation de contrastes trop faibles avec leurs arrière-plans.</li><!--3.2-->
+<li><strong>Défaut de lisibilité des éléments graphiques porteurs d’informations :</strong> la lisibilité de certains éléments graphiques porteurs d’informations est dégradée du fait de l’utilisation de contrastes trop faibles avec leurs arrière-plans.</li><!--3.3-->
+<li><strong>Absence de résumé des tableaux de données complexes :</strong> certains tableaux de données complexes n’ont pas de résumé, ce qui peut empêcher les aveugles et les grands malvoyants qui accèdent aux contenus par l’intermédiaire d’un lecteur d’écran, les malvoyants qui utilisent une loupe d’écran ou les utilisateurs ayant un champ de vision réduit ou partiellement masqué de percevoir l’organisation du tableau.</li><!--5.1-->
+<li><strong>Linéarisation et identification des tableaux de mise en forme :</strong> l'absence d'identification de certains tableaux de mise en forme peut causer des difficultés de compréhension pour les utilisateurs de lecteur d'écran parcourant le contenu de manière séquentielle.</li><!--5.3-->
+<li><strong>Défaut d'identification des titres de tableaux de données :</strong> les titres des tableaux de données n'étant pas associés correctement à leurs tableaux, un utilisateur de lecteur d'écran employant la fonctionnalité avancée d'affichage de la liste des éléments de la page ne peut pas identifier les tableaux de données.</li><!--5.4-->
+<li><strong>Titrage non pertinent des tableaux de données :</strong> certains titres liés aux tableaux de données sont imprécis, ce qui rend impossible l'identification du tableau pour un utilisateur aveugle ou grand malvoyant utilisant les fonctionnalités avancées d'un lecteur d'écran (déplacement par type d'élément ou affichage de la liste des éléments de la page).</li><!--5.5-->
+<li><strong>Absence de liaisons programmatiques entre les cellules d'en-têtes de colonnes et les cellules de données des tableaux :</strong> certaines cellules d'en-têtes de colonnes ne sont ni identifiées, ni liées aux cellules de données, ce qui rend impossible l'association des cellules d'en-têtes et de données pour les utilisateurs de lecteurs d'écran, de loupes vocalisées ou pour les déficients visuels dépourvus de vision périphérique ou centrale.</li><!--5.6 et 5.7-->
+<li><strong>Scripts incompatibles avec les technologies d’assistance :</strong> certains composants riches développés avec JavaScript (système d'onglets et fenêtres modales) ne sont pas conformes aux modèles de comportement au clavier fournis par les modèles de conception ARIA.</li><!--7.1 et 7.3-->
+<li><strong>Messages de statut non identifiés :</strong> certains messages de statut ne sont pas codés conformément aux normes d’accessibilité, ce qui rend complexe leur restitution par les technologies d'assistance.</li><!--7.5-->
+<li><strong>Défaut de structuration du document HTML5 :</strong> l'absence de certains éléments de structure du document en HTML5 rend inopérant les moyens de navigation rapide proposés par les lecteurs d'écrans ou des plug-ins spécifiques.</li><!--9.2-->
+<li><strong>Défaut de personnalisation de l'affichage :</strong> certains contenus (taille des caractères et jeu de couleurs) ne sont pas personnalisables par les dispositifs logiciels utilisés par les personnes en situation de handicap visuel.</li><!--10.4-->
+<li><strong>Insertion via CSS de contenus n’ayant pas vocation à être ignorés par les technologies d’assistance :</strong> certains contenus informatifs sont insérés via CSS, ce qui peut empêcher leur restitution par les lecteurs d’écran ou les systèmes de loupes vocalisées.</li><!--10.8-->
+<li><strong>Défaut d’identification des champs de formulaires :</strong> certains formulaires contiennent des champs de saisie dont l’étiquette visible est différente de l’étiquette accessible, ce qui peut occasionner des difficultés majeures pour remplir les formulaires aux utilisateurs de lecteurs d'écrans, de loupes vocalisées ou de systèmes de contrôle vocaux.</li><!--11.2-->
+<li><strong>Absence de libellés pertinents sur certains boutons :</strong> l'intitulé de certains boutons n'est pas pertinent, ce qui peut créer des difficultés pour les déficients visuels ne voyant qu'une partie limitée de l'écran ainsi que pour les utilisateurs de systèmes de contrôles vocaux.</li><!--11.9-->
+<li><strong>Contrôle des limites de temps :</strong> l’utilisateur n’a pas de contrôle sur la mise à jour de certains contenus, ce qui peut empêcher l’accomplissement de la tâche ou la lecture du contenu par les personnes ayant recours à des technologies d’assistance.</li><!--13.1-->
+<li><strong>Fichiers en téléchargement :</strong> certains documents en téléchargement ne sont pas traités pour l’accessibilité et ne disposent pas d’alternatives accessibles aux aveugles et grands malvoyants.</li><!--13.3-->
+<li><strong>Défaut d'alternatives aux contenus cryptiques :</strong> certains contenus cryptiques n'ont pas d'alternatives accessibles, ce qui peut empêcher les utilisateurs pour lesquels ces contenus ne représentent qu'une succession de caractères (par exemple utilisateurs de lecteurs d'écrans se fiant à la restitution vocale de la synthèse) de comprendre le contenu.</li><!--13.5-->
     </ol>
     <p>L'ensemble de ces points de non conformité est intégré aux plans d'action annuels du <a href="../../schema-pluriannuel">schéma pluriannuel de mise en accessibilité du CISIRH</a>.</p>
     <h3>Dérogations pour charge disproportionnée</h3>
@@ -655,7 +669,7 @@ pre[class*="language-"] {
     <h2>Contenu exempté</h2>
     <p>Cette déclaration ne s'applique pas à l'Espace Déclaration Sociale Nominative (EDSN). Cet espace est en effet développé par un tiers qui n'est pas sous le contrôle du CISIRH.</p>
     <h2>Établissement de cette déclaration d'accessibilité</h2>
-    <p>Cette déclaration a été établie le <b><span class="basic-information statement-created-date ">26 mars 2024</span></b>.</p>
+    <p>Cette déclaration a été établie le <b><span class="basic-information statement-created-date ">12 mai 2026</span></b>.</p>
     <h2>Amélioration et contact</h2>
     <p>Si vous n’arrivez pas à accéder à un contenu ou à un service en raison d'un défaut d'adaptation de l'application à votre handicap, vous pouvez contacter le responsable accessibilité du <span class="basic-information website-name ">Concentrateur Traducteur Déclaration Sociale Nominative (CTDSN)</span> pour être orienté
       vers une alternative accessible ou obtenir le contenu sous une autre forme.</p>
