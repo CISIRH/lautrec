@@ -631,39 +631,30 @@ pre[class*="language-"] {
       <b>partiellement conforme avec le RGAA 4.1</b>. Partiellement conforme veut dire que certaines sections du contenu ne sont pas entièrement conformes aux standards d'accessibilités.
     </p>
     <h3>Résultats des tests</h3>
-    <p>L’audit de conformité réalisé en interne, par une personne non impliquée dans le développement de l'application, révèle que 85,93 % des critères RGAA sont respectés.</p>
+    <p>L’audit de conformité réalisé en interne, par une personne non impliquée dans le développement de l'application, révèle que 84,12 % des critères RGAA sont respectés.</p>
 
     <h2>Contenus non accessibles</h2>
 
     <h3>Non conformité</h3>
     <p>Malgré nos efforts, certains contenus sont inaccessibles. Vous trouverez ci-dessous une liste des limitations connues :</p>
     <ol>
-     
-      <li><strong>Tableaux de mise en forme</strong>: certains tableaux de mise en forme ne sont pas identifiés comme tels et ont un contenu qui n'est pas réparti selon un ordre logique, ce qui peut occasionner des problèmes de compréhension pour les utilisateurs
-        de lecteurs d'écran parcourant le contenu de manière séquentielle.</li>
-      <li><strong>Liens sans intitulés</strong>: en raison de liens sans intitulés, les utilisateurs aveugles et grands malvoyants peuvent être dans l'incapacité d'utiliser certains contenus faute de pouvoir déterminer les actions associées aux liens.
-      </li>
-      <li><strong>Affichage de la présentation</strong>: la présence d'effets de présentation qui ne reposent pas intégralement sur l'utilisation de styles CSS peut rendre certains contenus impossibles à personnaliser et à adapter aux capacités des utilisateurs
-        déficients visuels.</li>
-        <li><strong>Présence d'informations dans les feuilles de style</strong>: certains contenus informatifs sont insérés via du CSS et ne sont donc pas restitués par les lecteurs d'écran ou les systèmes de loupes vocalisées.</li>
-      <li><strong>Présence de l'information dans le code</strong>: des contenus informatifs insérés via CSS ne sont pas restitués par les lecteurs d'écran ou les systèmes de loupes vocalisés.</li>
-      <li><strong>Contrôle des limites de temps</strong>: l'utilisateur ne peut contrôler la limite de temps qui lui est imposée, ce qui peut occasionner des problèmes d'accès à l'information pour les usagers dont les performances dans l'exploration, la lecture
-        et l'utilisation des contenus et fonctionnalités sont réduites.</li>
-        <li><strong>Fichiers en téléchargement</strong>: certains documents en téléchargement ne sont pas traités pour l’accessibilité et ne disposent pas d’alternatives accessibles aux aveugles et grands malvoyants.</li>
-      <li><strong>Lisibilité des contenus</strong>: l'utilisation de contrastes de couleurs trop faibles peut compromettre la lisibilité des contenus pour les utilisateurs déficients visuels.</li>
-      <li><strong>Etiquettes des formulaires</strong>: quelques champs de saisie dans les formulaires sont dépourvus d'étiquette. Cela peut occasionner des difficultés majeures à remplir les formulaires concernés pour les utilisateurs aveugles, grands malvoyants
-        et déficients visuels qui utilisent des lecteurs d'écran ou des loupes vocalisées.</li>
-      <li><strong>Structuration des listes</strong>: l'utilisation incorrecte des balises de liste peut rendre certains contenus ambigus ou difficilement identifiables. Elle peut également rendre inopérante certaines fonctionnalités de navigation proposées
-        par les lecteurs d'écran pour les utilisateurs aveugles et grands malvoyants ou par des plug-ins pour les utilisateurs handicapés moteurs.</li>
-      <li><strong>Ordre du contenu</strong>: des incohérences dans l'ordre dans lequel certaines informations se présentent dans le code peuvent provoquer des incompréhensions pour les aveugles et grands malvoyants accédant au contenu par l'intermédiaire
-        d'un lecteur d'écran.</li>
+     <li><strong>Images de décoration sans alternatives vides :</strong> des images de décoration sont renseignées, ce qui produit de l'information inutile pour les utilisateurs de lecteurs d'écrans et de systèmes de vocalisations couplés aux logiciels d'agrandissement.</li><!--1.2-->
+     <li><strong>Défaut de lisibilité des contenus :</strong> la lisibilité de certains textes est dégradée du fait de l'utilisation de contrastes trop faibles avec leurs arrière-plans.</li><!--3.2-->
+     <li><strong>Scripts incompatibles avec les technologies d’assistance :</strong> certains composants riches développés avec JavaScript ne sont pas conformes aux modèles de comportement au clavier fournis par les modèles de conception ARIA.</li><!--7.1-->
+     <li><strong>Hiérarchie des titres non pertinente: le titrage non pertinent rend inopérant certaines fonctionnalités de navigation proposées par les lecteurs d'écran, les navigateurs ou des <span lang="en">plug-ins</span> spécifiques.<!--9.1-->
+     <li><strong>Ordre du contenu : des incohérences dans l’ordre dans lequel le contenu informatif se présente dans le code peuvent provoquer des incompréhensions pour les utilisateurs de lecteurs d’écran.<!--10.3-->
+     <li><strong>Présence de contenus informatifs insérés via CSS : ces contenus peuvent ne pas être restitués par les lecteurs d’écran ou les systèmes de loupes vocalisés.<!--10.8-->
+     <li><strong>Absence d'identification des champs de formulaires: certains formulaires contiennent des champs de saisie dépourvus d'étiquette, ce qui peut occasionner des difficultés majeures pour remplir les formulaires aux utilisateurs de lecteurs d'écrans, de loupes vocalisées ou de systèmes de contrôle vocaux.<!--11.1-->
+     <li><strong>Contrôle de la saisie: les indications de champs obligatoires ne répondent pas aux normes d'accessibilité.<!--11.10-->
+     <li><strong>Système de navigation non pertinent: aucun lien d'évitement ne permet d'aller directement au contenu principal de la page, ce qui peut rendre la navigation laborieuse pour des utilisateurs en situation de handicap.<!--12.7-->
+     <li><strong>Accessibilité au clavier des contenus :</strong> certains contenus additionnels apparaissant au survol, à la prise de focus ou à l’activation d’un composant d’interface ne sont pas accessibles au clavier.</li><!--12.11-->
 
-    </ol>
+    </strong></li></strong></li></strong></li></strong></li></strong></li></strong></li></ol>
     <p>L'ensemble de ces points de non conformité est intégré aux plans d'action annuels du <a href="../../schema-pluriannuel">schéma pluriannuel de mise en accessibilité du CISIRH</a>.</p>
     <h3>Dérogations pour charge disproportionnée</h3>
     <p>Le CISIRH n'invoque la dérogation temporaire pour charge disproportionnée sur aucune section, aucun contenu et aucune fonction de l'application.</p>
     <h2>Établissement de cette déclaration d'accessibilité</h2>
-    <p>Cette déclaration a été établie le <b>28 novembre 2023</b>.</p>
+    <p>Cette déclaration a été établie le <b>23 juin 2026</b>.</p>
     <h2>Amélioration et contact</h2>
     <p>Si vous n’arrivez pas à accéder à un contenu ou à un service en raison d'un défaut d'adaptation de l'application à votre handicap, vous pouvez contacter le responsable accessibilité de ProfilCadreSup pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre
       forme.
@@ -687,6 +678,7 @@ pre[class*="language-"] {
       <li>Contacter <a href="https://www.defenseurdesdroits.fr/saisir/delegues">le délégué du Défenseur des droits dans votre région</a></li>
       <li>Envoyer un courrier par la poste (gratuit, ne pas mettre de timbre) :<br> Défenseur des droits<br> Libre réponse 71120 75342 Paris CEDEX 07</li>
     </ul>
+ 
  
 
       </div>
